@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Charles Donaldson Resume</title>
+    <link rel="stylesheet" href="resume-20230222.css">
+  </head>
+  <body>
+    <div class="resume-title">Charles Donaldson</div>
+    <hr/>
+    <div class="contact-grid">
+      <div>Riegelsville, Pennsylvania 18077-0495</div>
+      <div>charles.j.donaldson@gmail.com</div>
+      <div>267.772.0765</div>
+      <div>LinkedIn.com/in/charlesdonaldson</div>
+    </div>
+
+    <div>
+      <sectionName>Summary</sectionName>
+      <div class="summary">
+        <div class="summary-grid"> <!-- 2 - 3 targeted job titles -->
+          <div>Software Engineer</div>
+          <div>Scala Functional developer</div>
+          <div>Software Architect</div>
+        </div>
+          <!-- a statement about who you are professional -->
+          <!-- 2 statements highlighting a specific strength or experience for the audience or role -->
+          <!-- a statement specifically how or why your combined background aligns with target role / employer -->
+        <li>A software engineer with 10+ years in back-end services written in Scala, Play framework, cats, and fs2.</li>
+        <li>I have many years of experience in back-end API design and implementation.</li>
+        <li>Utilized event messages in a pub/sub topology using Kafka</li>
+        <li>Experienced in distributed services using API sequencing or event driven models.</li>
+      </div>
+    </div>
+
+    <div>
+      <sectionName>Skills</sectionName>
+      <div class="skills">
+        <li>Agile practices</li>
+        <li>Algorithms</li>
+        <li>AWS infrastructure</li>
+        <li>Back-end / Front-end technologies</li>
+        <li>Code base management</li>
+        <li>Docker</li>
+        <li>Shell scripting</li>
+        <li>System design</li>
+      </div>
+    </div>
+
+    <sectionName class="tight-bottom">Work History</sectionName>
+
+    <div class="job">
+      <company>
+        <a href="www.booktst.com">Travel Syndicated Technology (TST LLC)</a>, Alpharetta, Georgia
+        <jdate>Feb 2020 to current</jdate>
+      </company>
+      <brief>
+        Focusing on providing world class travel technology solutions to our customers in an effort to significantly improve look-to-book ratios and maximize revenue.
+        Benefiting travel agencies, consolidators, member organizations, or other entities looking to sell all types of travel online including air, car, hotel, cruise, or tour packages
+      </brief>
+      <jtitle>Software Engineer </jtitle>
+      <jbrief>
+        Recruited to apply my skills and understanding of Scala, Akka, and Kafka to the cruise inventory data-load service. The team was re-organized resulting in my role becoming more maintenance in nature resolving booking synchronization issues and payment status transparency.
+      </jbrief>
+      <div class="achievements">
+        <li>Refactored significant portions of the cruise services while adding behavior driven design test to insure continued expectations during code cleaning and avoid regressions</li>
+        <li>Become subject matter export on book and post booking cruise operations.</li>
+        <li>Defined booking and post booking enhancements and process for transparency with regard to payment and booking recovery to TST customers and consumers</li>
+        <li>Scrum master role coordinating Product owner and members expectations and load.</li>
+      </div>
+      <!--
+        My responsibilities is with the cruise product.
+        I am mostly back-end software engineer for the Cruise booking management services utilizing Scala, Play
+        Framework, and Kafka running in AWS. Roles include the complete software development life cycle for new
+        features and maintenance, scrum master, sprint planning. A champion for instrumenting behavioral testing,
+        modeling business rules, increasing code base confidence and regression avoidance. Services are hosted in
+        AWS – EC2, EKS, ELB, RDS, S3.
+        A development session entails coding a service to match the business rules or requirements with automated
+        business testing or increasing the test data population for bug reproduction and resolution, standing up the
+        required supporting infrastructure docker containers – 5 for cruise product and 7 infrastructure – and evaluating
+        end-to-end integration. Publish and generate pull request via GitHub, address or resolve review comments,
+        merge and then manage build in Jenkins or Drone, with a follow up validation and a pull request to production
+        if this is a severe bug patch.
+      -->
+    </div>
+
+    <div class="job print-break">
+      <company>
+        <a href="www.1010data.com">1010data</a>, New York, New York
+        <jdate>Mar 2018 to Nov 2019</jdate>
+      </company>
+      <brief>
+        Empowering companies to monitor shifts in consumer and market demand and rapidly respond with highly-targeted strategies.
+      </brief>
+      <jtitle>Software Engineer</jtitle>
+      <jbrief>
+        Hired to work on a new product offering to provide easier access - a gateway - to the powerful analytics available in the 1010data database engine.
+        This new user tool provided spreadsheet and graphical views as incremental processing steps are applied to ingest, transforms, and analyze their data.
+        I provided an end-point to upload multi-gigabyte files via a chunking process per the 101data database API.
+        Integration identified database API restrictions which lead to implementing an AWS S3 chunks and aggregations.
+      </jbrief>
+      <div class="achievements">
+        <li>Utilizing AWS S3 SDK to provide a set of signed S3 indexes for use by the browser that was aggregate together once all segments were uploaded</li>
+        <li>Utilizing JavaScript file splitting and uploading in a batched process that managed browser memory and CPU resources</li>
+        <li>Provided a workflow that allowed the user to continue working with the first slice as their sample data during worksheet-like step </li>
+        <li>Entered the full-stack camp using Vue, Vuex, and TypeScript</li>
+        <li>Championed the integration of TypeScript that reduced type bugs</li>
+      </div>
+      <!--
+      Full-stack software engineer utilizing JavaScript / Typescript / Vue / Vuex in the front-end authenticating and
+      making API calls to a Scala / Play Framework service running in an AWS EC2 instance performing request
+      translation and external service orchestration to resolve clients request.
+      This web application provided an intuitive spreadsheet like user experience with a user managed timeline to
+      analyze and manipulate the data. Data ingest from multiple sources - flat files from browser or cloud storage,
+      and databases via ODBC connectors, create analytical workflows with Intermediate visualizations of the steps,
+      and export to tables or to cloud storage.
+      Championed incorporating TypeScript into the front-end stack to improve the code base and development by
+      identifying unexpected / unintended type changes and leveraging IDE object inspection and code completion.
+      Implemented the database ingests of local files adhering to browser memory and connection constraints via a
+      file slicing process with signed URLs to AWS S3. The file slices were reassembled into the original file which
+      was then ingested and processed by the database engine per the analysis plan assembled. The service used
+      the AWS Java SDK.
+      -->
+    </div>
+
+    <!-- the umbrella timewise marking
+    <div class="job">
+      <company>
+        <a href="http://www.arris.com">ARRIS</a>, Horsham, Pennsylvania
+        <jdate>Apr 1996 to Dec 2017</jdate>
+      </company>
+      <brief>
+        Powering a smart, connected world. The company's leading hardware, software and services transform the way that people and businesses stay informed, entertained and connected.<br/>
+      </brief>
+    </div>
+    -->
+
+    <div class="job">
+      <company>
+        <a href="http://www.arris.com">ARRIS</a>, Horsham, Pennsylvania: CCAD LLC Joint Venture
+        <jdate>May 2015 to Dec 2017<jdate>
+      </company>
+      <brief>
+        Powering a smart, connected world. The company's leading hardware, software and services transform the way that people and businesses stay informed, entertained and connected.<br/>
+      </brief>
+      <jtitle>Software Engineer</jtitle>
+      <jbrief>
+        Moved into this role to advance the distributed tiered topology to configure, manage, and propagate streaming video meta data. This was a shift into the Scala language using cats, FS2, and Kafka. This is an eventual consistency system with the types and rates of the messaging.
+        <!--
+        This is a multi-service tiered architecture that managed cryptographic keys for encrypted content delivery, TV
+        guide data streams, channel plan changes, dynamic VOD / NVOD channel assignments, edge configuration.
+        Utilizing Kafka pub/sub with Akka streams – graphs and flows – to process, augment or refine messages, and
+        direct the emission of transformed messages in the Scala language and frameworks. API implementation via
+        Akka HTTP and JSON payloads. Inter-service messages encode via Avro for efficient high volume traffic. My
+        responsibilities include developing pipeline flows, Avro migration, Akka persistence and eventual consistency
+        resolutions. Involved in BitBucket code repository management, Bamboo build systems, and VMWare
+        hardware virtualization for deployed code.
+        Additional responsibilities included managing Scala version breaking changes during core and library
+        upgrades.
+        An active participant in product planning and sprint grooming with product owners.
+        As well as resolving customer maintenance and issues.
+        -->
+      </jbrief>
+      <div class="achievements">
+        <li>Migrated the code base to Java 1.8 and Scala 2.10 gaining performance and library improvements</li>
+        <li>Augmented and refined Avro messages, their processing through Akka Streams, and pub/sub via Kafka.</li>
+        <li>Active participant in product planning and sprint grooming with product owners.</li>
+      </div>
+    </div>
+
+    <div class="job">
+      <company>
+        <a href="http://www.arris.com">ARRIS</a>, Horsham, Pennsylvania: Motorola Mobility
+        <jdate>Jan 2011 to May 2015</jdate>
+      </company>
+      <brief>
+        Powering a smart, connected world. The company's leading hardware, software and services transform the way that people and businesses stay informed, entertained and connected.<br/>
+      </brief>
+      <jtitle>System Integration and Test Automation and Tools Engineering</jtitle>
+      <jbrief>
+        The achievements obtained in the prior role as Integration and Test Automation engineer were applied across the division and a large variety of products via a set of servers running images of the automation tool configuring racks of ARRIS products and test equipment. All being managed from a central web app to schedule tests, present status, generate reports.
+      </jbrief>
+      <div class="achievements">
+        <li>Architect and Lead of a team of 10 engineers – 6 offshore and 4 US - developing the services to facility concurrent product qualification testing.</li>
+        <li>Developed scalable automation framework for single product to multiple product testing – racks of connected products.</li>
+        <li>Utilized C/C++/Python with persistence to monitor and execute test automation.</li>
+        <li>Utilized Visual Basic .Net with MS Web server to configure test scheduling, status, and present results.</li>
+        <!-- <li>Configured GIT repositories and server for source code management.</li> -->
+        <!-- <li>Trained colleagues in GIT terminology and operations with shell and UI tools.</li> -->
+      </div>
+    </div>
+      
+    <div class="job">
+      <company>
+        <a href="http://www.arris.com">ARRIS</a>, Horsham, Pennsylvania: Motorola Mobility
+        <jdate>Jan 2006 to Dec 2010</jdate>
+      </company>
+      <brief>
+        Powering a smart, connected world. The company's leading hardware, software and services transform the way that people and businesses stay informed, entertained and connected.<br/>
+      </brief>
+      <jtitle>System Integration and Test Automation Engineer</jtitle>
+      <jbrief>
+        Moved into this role to improve product release schedules and development iteration feedback via tools and scripts to automate test configurations, data collection, results reporting.
+      </jbrief>
+      <div class="achievements">
+        <li>Utilized LabVIEW and TestStand automation to achieve significant time savings</li>
+        <li>IGMP testing decreased from 40 Hours to 3 hours.</li>
+        <li>Transport Redundancy decreased from 80 hours to 19 hours.</li>
+        <li>Device configuration decreased from hours to minutes.</li>
+        <li>Implemented proprietary Wireshark protocol dissectors for headend and SDV operational diagnostics.</li>
+        <li>Defined and administered the IP infrastructure for a multi-gigabit multi-router Ethernet video network using Cisco and Force10 Network switches leveraging OSPF, PIM SSM, BSR, and multiple rendezvous points for efficient transport.</li>
+        <li>Wrote set top box channel change simulation tool for switched digital video load testing.</li>
+      </div>
+    </div>
+
+    <!--
+    <div class="job">
+      <company>
+        <a href="http://www.arris.com">ARRIS</a>, Horsham, Pennsylvania: Networks
+        <jdate>Jun 2004 to 2006</jdate>
+      </company>
+      <brief>
+        Powering a smart, connected world. The company's leading hardware, software and services transform the way that people and businesses stay informed, entertained and connected.<br/>
+      </brief>
+      <jtitle>Technical Specialist</jtitle>
+      <jbrief>
+        Passive Optical Network (PON) Ethernet card<br/>
+      </jbrief>
+      <div class="achievements">
+        <li class="achievements">Finalized schematic, board layout, low level design documentation, and design verification test plans.</li>
+        <li class="achievements">Utilized high-speed digital design/layout (micro-strip and strip-line wave-guides) for 10/100 BaseT / 1000 BaseX</li>
+        <li class="achievements">Implemented test fixtures using I2C bus, system management interface (SMI) protocols and software to configure and status the card</li>
+      </div>
+    </div>
+    -->
+
+    <!--
+    <sectionName>Early work history</sectionName>
+    very brief summaries
+    -->
+
+    <sectionName>Education</sectionName>
+    Lafayette College, Easton Pennsylvania<br/>
+    Bachelors in Science for Electrical and Computer Engineering
+
+    <!--
+    <sectionName>Affiliations / accreditation / ???</sectionName>
+    -->
+
+  </body>
+</html>
+
