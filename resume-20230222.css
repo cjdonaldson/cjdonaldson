@@ -1,0 +1,128 @@
+body {
+  margin-left: 2em;
+  margin-right: 2em;
+}
+.resume-title {
+  text-align: center;
+  font-size: 2.3em;
+}
+.contact-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  margin-bottom: 0.5em;
+}
+.contact-grid > div:nth-child(even) {
+  text-align: right;
+}
+.summary {
+  margin-top: -0.3em;
+  margin-bottom: 0.5em;
+}
+div.summary > li:nth-child(2) {
+  margin-top: -0.5em;
+}
+div.summary > li {
+  margin-left: 2.0em;
+  text-indent: -1.4em;
+}
+.summary-grid {
+  display: grid;
+  grid-template-columns: 1fr 2fr 1fr;
+  font-size: 1.2em;
+}
+div.summary-grid > div:nth-child(2) {
+  text-align: center;
+  padding-bottom: 0.5em;
+}
+div.summary-grid > div:nth-child(3) {
+  text-align: right;
+}
+sectionName {
+  display: block;
+  border-style: solid;
+  border-color: black;
+  border-top-width: 4px;
+  border-bottom-width: 0px;
+  border-left-width: 0px;
+  border-right-width: 0px;
+  padding-top: 0.5em;
+  padding-bottom: 0.5em;
+  font-size: 1.4em;
+}
+company {
+  display: block;
+  padding-top: 0.5em;
+  font-size: 1.1em;
+  text-decoration: underline;
+}
+brief {
+  display: block;
+  padding-top: 0.5em;
+  padding-left: 1.0em;
+  padding-right: 1.0em;
+}
+jdate {
+  float: right;
+}
+jtitle {
+  padding-top: 0.5em;
+  display: block;
+  font-size: 1.1em;
+}
+jbrief {
+  display: block;
+  padding-top: 0.3em;
+  padding-left: 1.0em;
+  padding-right: 1.0em;
+  padding-bottom: 1.0em;
+}
+.skills {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  margin-left: 1.0em;
+  padding-top: 0.3em;
+  margin-bottom: 0.8em;
+}
+div.skills > li:first-child {
+  margin-top: -1.0em;
+}
+div.skills > li:nth-child(2) {
+  margin-top: -1.0em;
+}
+div.skills > li:nth-child(3) {
+  margin-top: -1.0em;
+}
+div.skills > li:nth-child(4) {
+  margin-top: -1.0em;
+}
+div.skills > li {
+  padding-left: 1.0em;
+  text-indent: -1.4em;
+}
+.achievements {
+  margin-left: 1.0em;
+  padding-top: 0.3em;
+}
+div.achievements > li:first-child {
+  margin-top: -1.0em;
+}
+div.achievements > li {
+  padding-left: 1.0em;
+  text-indent: -1.4em;
+}
+.job {
+  margin-bottom: 1.0em;
+}
+.print-break {
+  page-break-before: always;
+}
+div.job > div.achievements > li {
+  padding-left: 2.0em;
+  text-indent: -1.4em;
+}
+.spaced-top {
+  margin-top: 0.5em;
+}
+.tight-bottom {
+  margin-bottom: -0.5em;
+}
