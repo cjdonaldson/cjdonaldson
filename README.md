@@ -13,8 +13,8 @@
 ⚡ Fun fact: Outdoorsy kind of guy enjoying camping, kayaking, walks with the Mrs and pups.
 
 my resume:
-  [HTML](https://htmlpreview.github.io/?https://github.com/cjdonaldson/cjdonaldson/blob/main/resume-20230222.html)
-  [PDF](https://htmlpreview.github.io/?https://github.com/cjdonaldson/cjdonaldson/blob/main/under-develpoment.html)
+  [HTML](https://htmlpreview.github.io/?https://github.com/cjdonaldson/cjdonaldson/blob/main/resume-20230223.html)
+  [PDF](https://github.com/cjdonaldson/cjdonaldson/blob/main/resume-20230223.pdf)
 
 🔭 I’m currently working on an IoT farm simulator (ie: pull together my knowledge into a presentable set):
 - Streaming environment sensor data - temperature, humidity, windy, solar load.
