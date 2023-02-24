@@ -55,6 +55,30 @@ company {
   font-size: 1.1em;
   text-decoration: underline;
 }
+.company-stack {
+  margin-top: 0.5em;
+  margin-left: 1.0em;
+  margin-right: 1.0em;
+  padding-top: 0.5em;
+  border-style: solid;
+  border-color: darkgray;
+  border-top-width: 1px;
+  border-bottom-width: 0px;
+  border-left-width: 0px;
+  border-right-width: 0px;
+}
+.stack {
+  margin-top: 0.5em;
+  margin-left: 1.0em;
+  margin-right: 1.0em;
+  padding-top: 0.5em;
+  border-style: solid;
+  border-color: darkgray;
+  border-top-width: 1px;
+  border-bottom-width: 0px;
+  border-left-width: 0px;
+  border-right-width: 0px;
+}
 brief {
   display: block;
   padding-top: 0.5em;
@@ -68,6 +92,7 @@ jtitle {
   padding-top: 0.5em;
   display: block;
   font-size: 1.1em;
+  padding-left: 0.0em;
 }
 jbrief {
   display: block;
@@ -119,9 +144,6 @@ div.achievements > li {
 div.job > div.achievements > li {
   padding-left: 2.0em;
   text-indent: -1.4em;
-}
-.spaced-top {
-  margin-top: 0.5em;
 }
 .tight-bottom {
   margin-bottom: -0.5em;

@@ -13,8 +13,8 @@
 ⚡ Fun fact: Outdoorsy kind of guy enjoying camping, kayaking, walks with the Mrs and pups.
 
 my resume:
-  [HTML](https://htmlpreview.github.io/?https://github.com/cjdonaldson/cjdonaldson/blob/main/resume-20230222.html)
-  [PDF](https://htmlpreview.github.io/?https://github.com/cjdonaldson/cjdonaldson/blob/main/under-develpoment.html)
+  [HTML](https://htmlpreview.github.io/?https://github.com/cjdonaldson/cjdonaldson/blob/main/resume-20230223.html)
+  [PDF](https://github.com/cjdonaldson/cjdonaldson/blob/main/resume-20230223.pdf)
 
 🔭 I’m currently working on an IoT farm simulator (ie: pull together my knowledge into a presentable set):
 - Streaming environment sensor data - temperature, humidity, windy, solar load.
@@ -26,9 +26,7 @@ my resume:
 
 <!-- https://github.com/anuraghazra/github-readme-stats -->
 [![Chuck's GitHub stats](https://github-readme-stats.vercel.app/api?username=cjdonaldson&count_private=true&show_icons=true)](https://github.com/anuraghazra/github-readme-stats)
-<!--
 [![Top Langs](https://github-readme-stats.vercel.app/api/top-langs/?username=cjdonaldson&layout=compact)](https://github.com/anuraghazra/github-readme-stats)
--->
 
 
 <!--
