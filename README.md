@@ -26,9 +26,7 @@ my resume:
 
 <!-- https://github.com/anuraghazra/github-readme-stats -->
 [![Chuck's GitHub stats](https://github-readme-stats.vercel.app/api?username=cjdonaldson&count_private=true&show_icons=true)](https://github.com/anuraghazra/github-readme-stats)
-<!--
 [![Top Langs](https://github-readme-stats.vercel.app/api/top-langs/?username=cjdonaldson&layout=compact)](https://github.com/anuraghazra/github-readme-stats)
--->
 
 
 <!--
