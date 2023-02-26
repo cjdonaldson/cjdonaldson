@@ -1,0 +1,10 @@
+#!/bin/bash
+
+echo 'removing these target folders'
+#find . -type d -name target
+#find . -type d -name target | xargs -I {} rm -rf {}
+for d in `find . -type d -name target`
+do
+  echo $d
+  rm -rf "$d"
+done

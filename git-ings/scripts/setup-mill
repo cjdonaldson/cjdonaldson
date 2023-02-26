@@ -1,0 +1,106 @@
+#!/bin/bash
+
+app="app"
+if [ "$1" != "" ]; then
+  app="$1"
+fi
+
+
+
+touch build.sc README.md LICENSE
+git init
+git add README.md build.sc LICENSE
+mkdir -p $app/resources/www/{html,images,js,css}
+mkdir -p $app/src/main/scala/llc/dodropin/{controllers,services,domain}
+mkdir -p $app/test/src/main/scala/llc/dodropin/{controllers,services,domain}
+
+# ====
+if [ ! -f ./.mill-version ]; then
+echo "
+0.10.10
+" > ./.mill-version
+fi
+git add ./.mill-version
+
+# ====
+if [ ! -f ./.scalafix.conf ]; then
+echo "
+rules = [
+]
+" > ./.scalafix.conf
+fi
+git add ./.scalafix.conf
+
+# ====
+if [ ! -f ./.scalafmt.conf ]; then
+echo "
+version = 3.4.3
+runner.dialect = scala3
+
+# assumeStandardLibraryStripMargin = true
+# align.stripMargin = true
+#
+# align.preset = none
+#
+# align.openParenCallSite = true
+# align.openParenDefnSite = true
+#
+#align.openParenDefnSite = false
+# danglingParentheses.defnSite = true
+# danglingParentheses.callSite = true
+#
+# #newlines.beforeCurlyLambdaParams = multiline
+# newlines.beforeCurlyLambdaParams = multilineWithCaseOnly
+# newlines.afterCurlyLambdaParams = squash
+#
+# #optIn.breakChainOnFirstMethodDot = false
+#
+maxColumn=140
+#
+trailingCommas = never
+#
+# rewrite.rules = [AsciiSortImports, AvoidInfix, PreferCurlyFors, RedundantBraces, RedundantParens]
+" > ./.scalafmt.conf
+fi
+git add ./.scalafmt.conf
+
+# ====
+if [ ! -f $app/resources/logback.xml ]; then
+echo "
+<configuration>
+
+    <appender name=\"CONSOLE\" class=\"ch.qos.logback.core.ConsoleAppender\">
+        <encoder class=\"ch.qos.logback.classic.encoder.PatternLayoutEncoder\">
+            <Pattern>
+                %d{HH:mm:ss.SSS} [%t] %-5level %logger{36} - %msg%n
+            </Pattern>
+        </encoder>
+    </appender>
+
+    <logger name=\"net.dodropin\" level=\"debug\"/>
+
+    <logger name=\"slick.basic.BasicBackend.action\" level=\"debug\"/>
+    <logger name=\"slick.jdbc.DriverDataSource\" level=\"debug\"/>
+    <logger name=\"slick.jdbc.JdbcBackend.statement\" level=\"debug\"/>
+    <logger name=\"slick.jdbc.JdbcBackend.parameter\" level=\"debug\"/>
+    <logger name=\"slick.jdbc.StatementInvoker.result\" level=\"debug\"/>
+    <logger name=\"slick\" level=\"warn\"/>
+
+    <root level=\"info\">
+        <appender-ref ref=\"CONSOLE\"/>
+    </root>
+
+</configuration>
+" > $app/resources/logback.xml
+fi
+
+# ====
+if [ ! -f $app/resources/reference.conf ]; then
+echo "
+llc.dodropin: {
+  $app: {
+  }
+}" > $app/resources/reference.conf
+fi
+
+git add $app/resources/

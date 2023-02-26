@@ -1,0 +1,7 @@
+#!/bin/bash
+
+find . -name '*_BASE_*' -delete
+find . -name '*_BACKUP_*' -delete
+find . -name '*_LOCAL_*' -delete
+find . -name '*_REMOTE_*' -delete
+find . -name '*.orig' -delete

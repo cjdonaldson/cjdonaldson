@@ -1,0 +1,6 @@
+
+#this_dir=`cd $(dirname "${BASH_SOURCE[0]}") && pwd`
+this_dir=`basename $0`
+this_dir=$(dirname $(readlink -f $0))
+export PATH="$PATH:$this_dir/scripts/"
+
