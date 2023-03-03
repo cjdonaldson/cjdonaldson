@@ -1,12 +1,4 @@
-<!--
-<style>
-  li:first-child {
-     margin-top: -0.6em;
-  }
-</style>
--->
-
-# Charles (Chuck) Doanldson
+# Charles (Chuck) Donaldson
 
 I am a Scala developer applying functional and streaming practices where possible. Most of my experiences is in providing back-end services / api. I do have experience with JavaScript and some VueJs, and exploring React.
 <!--
@@ -69,7 +61,7 @@ I am a Scala developer applying functional and streaming practices where possibl
   </a>
   <!-- most used langs -->
   <a href="https://github.com/anuraghazra/github-readme-stats">
-    <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=cjdonaldson&layout=compact" alt="Top Langs" height="195">
+    <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=cjdonaldson&layout=compact&langs_count=8" alt="Top Langs" height="195">
   </a>
 </div>
   <!--
