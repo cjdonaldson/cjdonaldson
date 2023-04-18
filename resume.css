@@ -56,6 +56,7 @@ company {
   text-decoration: underline;
 }
 .company-stack {
+  visibility: visible;
   margin-top: 0.5em;
   margin-left: 1.0em;
   margin-right: 1.0em;
