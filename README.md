@@ -124,8 +124,8 @@ I am a Scala developer applying functional and streaming practices where possibl
 </div>
 
 resume:
-  [HTML](https://htmlpreview.github.io/?https://github.com/cjdonaldson/cjdonaldson/blob/main/resume.html)
-  [PDF](https://github.com/cjdonaldson/cjdonaldson/blob/main/resume.pdf)
+  [HTML](https://htmlpreview.github.io/?https://github.com/cjdonaldson/cjdonaldson/blob/main/Charles_Donaldson_Resume.html)
+  [PDF](https://github.com/cjdonaldson/cjdonaldson/blob/main/Charles_Donaldson_Resume.pdf)
 
 <!--
 - 🔭 I’m currently working on ...
