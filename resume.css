@@ -110,17 +110,8 @@ jbrief {
   padding-top: 0.3em;
   margin-bottom: 0.8em;
 }
-div.skills > li:first-child {
-  margin-top: -1.0em;
-}
-div.skills > li:nth-child(2) {
-  margin-top: -1.0em;
-}
-div.skills > li:nth-child(3) {
-  margin-top: -1.0em;
-}
-div.skills > li:nth-child(4) {
-  margin-top: -1.0em;
+div.skills-container {
+  margin-top: -0.5em;
 }
 div.skills > li {
   padding-left: 1.0em;
