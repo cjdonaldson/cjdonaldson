@@ -1,6 +1,15 @@
 # Charles (Chuck) Donaldson
 
-I am a Scala developer applying functional and streaming practices where possible. Most of my experiences is in providing back-end services / api. I do have experience with JavaScript and some VueJs, and exploring React.
+<li>I am a Scala developer applying functional and streaming practices where possible.
+  <ul>
+    <li><a href="https://www.scala-lang.org/">Scala</a> is an expressive, scalable, and safe high level langauage.</li>
+  </ul>
+</li>
+<li>Most of my experiences is in providing back-end services / api.</li>
+<li>I do have experience with JavaScript and some VueJs, and exploring React.</li>
+<li>Exploring Rust via <a href="https://codingchallenges.fyi/challenges/intro">Coding Challenges</a> and other real
+  world applications via a comparison of comparable Scala implementations. Immutability and functional styling challenges in Rust.</li>
+<li>Remote work since 2015 - long before covid was a thing.</li>
 <!--
 ### Hi there 👋
 😄 Pronouns: He/Him <br/>
@@ -14,56 +23,57 @@ I am a Scala developer applying functional and streaming practices where possibl
 <!-- https://github.com/DenverCoder1/custom-icon-badges -->
 <!-- https://github.com/simple-icons/simple-icons/blob/develop/slugs.md -->
 <!-- https://devicon.dev/   to search for icons -->
-### <g-emoji class="g-emoji" alias="toolbox" fallback-src="https://github.githubassets.com/images/icons/emoji/unicode/1f9f0.png"><img class="emoji" alt="toolbox" height="20" width="20" src="https://github.githubassets.com/images/icons/emoji/unicode/1f9f0.png"></g-emoji>  Technology
+### <g-emoji class="g-emoji" alias="toolbox" fallback-src="https://github.githubassets.com/images/icons/emoji/unicode/1f9f0.png"><img class="emoji" alt="toolbox" height="20" width="20" src="https://github.githubassets.com/images/icons/emoji/unicode/1f9f0.png"></g-emoji> Technologies
 
-<img align="left" alt="Scala" width="30px" style="padding-right:10px;" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/scala/scala-original.svg"/>
-<img align="left" alt="HTML" width="30px" style="padding-right:10px;" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-plain.svg" />
-<img align="left" alt="CSS" width="30px" style="padding-right:10px;" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-plain.svg" />
-<img align="left" alt="JavaScript" width="30px" style="padding-right:10px;" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-plain.svg" />
-<img align="left" alt="TypeScript" width="30px" style="padding-right:10px;" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/typescript/typescript-plain.svg" />
-<img align="left" alt="VueJs" width="30px" style="padding-right:10px;" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/vuejs/vuejs-original.svg"/>
-<img align="left" alt="React" width="30px" style="padding-right:10px;" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg" />
-<img align="left" alt="Bash" width="30px" style="padding-right:10px;" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/bash/bash-original.svg" />
-<img align="left" alt="C" width="30px" style="padding-right:10px;" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/c/c-original.svg" />
-<img alt="C++" width="30px" style="padding-right:10px;" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/cplusplus/cplusplus-line.svg" />
+<a href="https://www.scala-lang.org/"><img align="left" alt="Scala" width="30px" style="padding-right:10px;" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/scala/scala-original.svg"/></a>
+<a href="https://www.w3schools.com/html/default.asp"><img align="left" alt="HTML" width="30px" style="padding-right:10px;" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-plain.svg" /></a>
+<a href="https://www.w3schools.com/css/default.asp"><img align="left" alt="CSS" width="30px" style="padding-right:10px;" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-plain.svg" /></a>
+<a href="https://www.w3schools.com/js/default.asp"><img align="left" alt="JavaScript" width="30px" style="padding-right:10px;" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-plain.svg" /></a>
+<a href="https://www.w3schools.com/typescript/index.php"><img align="left" alt="TypeScript" width="30px" style="padding-right:10px;" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/typescript/typescript-plain.svg" /></a>
+<a href="https://vuejs.org/"><img align="left" alt="VueJs" width="30px" style="padding-right:10px;" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/vuejs/vuejs-original.svg"/></a>
+<a href="https://react.dev/"><img align="left" alt="React" width="30px" style="padding-right:10px;" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg" /></a>
+<a href="https://www.gnu.org/software/bash/manual/bash.html"><img align="left" alt="Bash" width="30px" style="padding-right:10px;" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/bash/bash-original.svg" /></a>
+<a href="https://www.gnu.org/software/gnu-c-manual/gnu-c-manual.html"><img align="left" alt="C" width="30px" style="padding-right:10px;" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/c/c-original.svg" /></a>
+<a href="https://cplusplus.com/reference/"><img align="left" alt="C++" width="30px" style="padding-right:10px;" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/cplusplus/cplusplus-line.svg" /></a>
+<a href="https://www.rust-lang.org/"><img alt="Rust" width="30px" style="padding-right:10px;" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/rust/rust-original.svg" /></a>
 
 <br/>
 
-<img align="left" alt="Git" width="30px" style="padding-right:10px;" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg" />
-<img align="left" alt="GitHub" width="30px" style="padding-right:10px;" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg" />
+<a href="https://git-scm.com/docs"><img align="left" alt="Git" width="30px" style="padding-right:10px;" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg" /></a>
+<a href="https://github.com/"><img align="left" alt="GitHub" width="30px" style="padding-right:10px;" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg" /></a>
 <img align="left" alt="vbar" width="30px" style="padding-right:0px;" src="vbar.svg" />
-<img align="left" alt="MySQL" width="30px" style="padding-right:10px;" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg" />
-<img align="left" alt="PostgreSQL" width="30px" style="padding-right:10px;" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/postgresql/postgresql-original.svg" />
-<img align="left" alt="Redis" width="30px" style="padding-right:10px;" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/redis/redis-original.svg" />
+<a href="https://www.mysql.com/"><img align="left" alt="MySQL" width="30px" style="padding-right:10px;" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg" /></a>
+<a href="https://www.postgresql.org/"><img align="left" alt="PostgreSQL" width="30px" style="padding-right:10px;" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/postgresql/postgresql-original.svg" /></a>
+<a href="https://redis.io/"><img align="left" alt="Redis" width="30px" style="padding-right:10px;" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/redis/redis-original.svg" /></a>
 <img align="left" alt="vbar" width="30px" style="padding-right:0px;" src="vbar.svg" />
-<img align="left" alt="Linux" width="30px" style="padding-right:10px;" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/linux/linux-original.svg" />
-<img align="left" alt="Linux" width="30px" style="padding-right:10px;" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/docker/docker-original.svg" />
+<a href="https://www.linux.org/"><img align="left" alt="Linux" width="30px" style="padding-right:10px;" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/linux/linux-original.svg" /></a>
+<a href="https://www.docker.com/"><img align="left" alt="docker" width="30px" style="padding-right:10px;" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/docker/docker-original.svg" /></a>
 <!--
 <img align="left" alt="Amazon EC2" width="30px" style="padding-right:10px;" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/amazonec2/amazonec2-original.svg" />
 <img align="left" alt="Amazon S3" width="30px" style="padding-right:10px;" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/amazons3/amazons3-original.svg" />
 -->
-<img alt="Amazon Services" width="30px" style="padding-right:10px;" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/amazonwebservices/amazonwebservices-original.svg" />
+<a href="https://aws.amazon.com/">AWS</a>
 
 ---
 
-🔭 I’m currently working on an IoT agriculture simulator (ie: pull together my knowledge into a presentable set):
-- Streaming environment sensor data - temperature, humidity, windy, solar load.
-- Streaming tractor location and status - power train vitals, maintenance needs.
-- UI to present graphically the streams of data
-- Use podman/docker to deploy multiple sensor clusters, aggregator, kafka, and the UI
-- Services to use http4s, cats, fs2, kafka
-- UI to use minimal JavaScript libraries initially leading into React development
+<!-- 🔭 I’m currently working on an IoT agriculture simulator (ie: pull together my knowledge into a presentable set): -->
+<!-- - Streaming environment sensor data - temperature, humidity, windy, solar load. -->
+<!-- - Streaming tractor location and status - power train vitals, maintenance needs. -->
+<!-- - UI to present graphically the streams of data -->
+<!-- - Use podman/docker to deploy multiple sensor clusters, aggregator, kafka, and the UI -->
+<!-- - Services to use http4s, cats, fs2, kafka -->
+<!-- - UI to use minimal JavaScript libraries initially leading into React development -->
 
-<div align="center">
-  <!-- https://github.com/anuraghazra/github-readme-stats -->
-  <a href="https://github.com/anuraghazra/github-readme-stats">
-    <img src="https://github-readme-stats.vercel.app/api?username=cjdonaldson&count_private=true&show_icons=true" alt="Chuck's GitHub Stats">
-  </a>
-  <!-- most used langs -->
-  <a href="https://github.com/anuraghazra/github-readme-stats">
-    <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=cjdonaldson&layout=compact&langs_count=8" alt="Top Langs" height="195">
-  </a>
-</div>
+<!-- <div align="center"> -->
+<!--   < !-- https://github.com/anuraghazra/github-readme-stats -- > -->
+<!--   <a href="https://github.com/anuraghazra/github-readme-stats"> -->
+<!--     <img src="https://github-readme-stats.vercel.app/api?username=cjdonaldson&count_private=true&show_icons=true" alt="Chuck's GitHub Stats"> -->
+<!--   </a> -->
+<!--   < !-- most used langs -- > -->
+<!--   <a href="https://github.com/anuraghazra/github-readme-stats"> -->
+<!--     <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=cjdonaldson&layout=compact&langs_count=8" alt="Top Langs" height="195"> -->
+<!--   </a> -->
+<!-- </div> -->
   <!--
 <div>
   <span>
