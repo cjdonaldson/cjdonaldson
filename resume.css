@@ -19,7 +19,7 @@ body {
   margin-bottom: 0.5em;
 }
 div.summary > li:nth-child(2) {
-  margin-top: -0.5em;
+  margin-top: 0.5em;
 }
 div.summary > li {
   margin-left: 2.0em;
