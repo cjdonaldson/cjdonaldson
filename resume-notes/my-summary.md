@@ -1,5 +1,5 @@
 # the elevator pitch #
-true intro, concise, mission, motivation, key skills, experience, asperation, accomplishments, 
+true intro, concise, mission, motivation, key skills, experience, asperation, accomplishments,
 
 # Profile Summary format (general) #
 - who you are
