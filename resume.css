@@ -100,7 +100,7 @@ jbrief {
   padding-top: 0.3em;
   padding-left: 1.0em;
   padding-right: 1.0em;
-  padding-bottom: 1.0em;
+  padding-bottom: 0.0em;
 }
 .skills {
   display: grid;
@@ -110,6 +110,10 @@ jbrief {
   padding-top: 0.3em;
   margin-bottom: 0.8em;
 }
+.skills ul {
+  display: contents;
+  list-style-type: none;
+}
 div.skills-container {
   margin-top: -0.5em;
 }
@@ -118,14 +122,17 @@ div.skills > li {
   text-indent: -1.4em;
 }
 .achievements {
-  margin-left: 1.0em;
   padding-top: 0.3em;
+}
+.achievements ul {
+  margin-top: 0.3em;
+  margin-bottom: 0.3em;
+  padding-left: 2.0em;
 }
 div.achievements > li:first-child {
   margin-top: -1.0em;
 }
 div.achievements > li {
-  padding-left: 1.0em;
   text-indent: -1.4em;
 }
 .job {
