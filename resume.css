@@ -26,17 +26,10 @@ div.summary > li {
   margin-left: 2.0em;
   text-indent: -1.4em;
 }
-.summary-grid {
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
+.summary-statement {
   font-size: 1.2em;
-}
-div.summary-grid > div:nth-child(2) {
-  text-align: center;
-  padding-bottom: 0.5em;
-}
-div.summary-grid > div:nth-child(3) {
-  text-align: right;
+  margin-top: 0;
+  margin-bottom: 0.5em;
 }
 sectionName {
   display: block;

@@ -72,10 +72,7 @@ def build_html(data):
     w('  <div>')
     w('    <sectionName><!-- Summary --></sectionName>')
     w('    <div class="summary">')
-    w('      <div class="summary-grid"> <!-- 2 - 3 targeted job titles -->')
-    for title in summary["titles"]:
-        w(f'        <div>{title}</div>')
-    w('      </div>')
+    w(f'      <p class="summary-statement">{summary["statement"]}</p>')
     w('      <ul>')
     for bullet in summary["bullets"]:
         w(f'        <li>{md_links(bullet.strip())}</li>')

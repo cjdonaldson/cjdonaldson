@@ -10,10 +10,9 @@ meta:
   keywords: Software Engineer, Scala, Functional Programming, Concurrency, Asynchronous API
 
 summary:
-  titles:
-    - Senior Software Engineer
-    - Scala Functional
-    - Software Architect
+  statement: >
+    A software engineer using functional paradigms and data type construction that prevents illegal states and boolean blindness.
+    Architecting solutions across the business domain.
   bullets_comments:
     - a statement about who you are professionally.
     - 2 statements highlighting a specific strength or experience for the audience or role.
