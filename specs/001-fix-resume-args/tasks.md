@@ -19,7 +19,7 @@
 
 **Purpose**: Confirm the exact code to be replaced before touching anything. This phase takes under 2 minutes.
 
-- [ ] T001 Audit `generate-resume.py` `main()` lines 140–151 to confirm the two hardcoded defaults (`script_dir / "resume_data.yaml"` on line 142, `script_dir / "Charles_Donaldson_Resume.html"` on line 143) and the two conditional overrides (`if len(sys.argv) > 1` on line 145, `if len(sys.argv) > 2` on line 147) that will be replaced in Phase 2
+- [X] T001 Audit `generate-resume.py` `main()` lines 140–151 to confirm the two hardcoded defaults (`script_dir / "resume_data.yaml"` on line 142, `script_dir / "Charles_Donaldson_Resume.html"` on line 143) and the two conditional overrides (`if len(sys.argv) > 1` on line 145, `if len(sys.argv) > 2` on line 147) that will be replaced in Phase 2
 
 **Checkpoint**: You can see the six lines (142–148) that constitute the entire broken contract before writing a single character of new code.
 
@@ -35,11 +35,11 @@
 
 ### Implementation for User Story 4
 
-- [ ] T002 [US4] Add argc guard at the top of `main()` in `generate-resume.py` (insert before line 141): `if len(sys.argv) < 3: print("usage: generate-resume.py resume_data.yaml output.html", file=sys.stderr); sys.exit(1)` — mirrors the shell script's bare print-and-exit style (research.md Finding 1); boundary is `< 3` not `!= 3` (research.md Finding 2)
+- [X] T002 [US4] Add argc guard at the top of `main()` in `generate-resume.py` (insert before line 141): `if len(sys.argv) < 3: print("usage: generate-resume.py resume_data.yaml output.html", file=sys.stderr); sys.exit(1)` — mirrors the shell script's bare print-and-exit style (research.md Finding 1); boundary is `< 3` not `!= 3` (research.md Finding 2)
 
-- [ ] T003 [US4] Add empty-string guard immediately after the argc guard in `generate-resume.py` `main()`: check `sys.argv[1].strip() == ""` or `sys.argv[2].strip() == ""` — if either is empty, print the same usage message to stderr and `sys.exit(1)` (spec.md Edge Cases; data-model.md Validation Rules)
+- [X] T003 [US4] Add empty-string guard immediately after the argc guard in `generate-resume.py` `main()`: check `sys.argv[1].strip() == ""` or `sys.argv[2].strip() == ""` — if either is empty, print the same usage message to stderr and `sys.exit(1)` (spec.md Edge Cases; data-model.md Validation Rules)
 
-- [ ] T004 [US4] Replace the six-line hardcoded-defaults + conditional-override block (lines 141–148 of `generate-resume.py`) with two direct assignments: `data_file = Path(sys.argv[1]).resolve()` and `output_file = Path(sys.argv[2]).resolve()` — delete `script_dir`, the two default `Path(...)` lines, and both `if len(sys.argv) >` guards; the `.resolve()` calls on lines 150–151 fold into these assignments (data-model.md AFTER block; contracts/cli-contract.md "Hardcoded Defaults Removed")
+- [X] T004 [US4] Replace the six-line hardcoded-defaults + conditional-override block (lines 141–148 of `generate-resume.py`) with two direct assignments: `data_file = Path(sys.argv[1]).resolve()` and `output_file = Path(sys.argv[2]).resolve()` — delete `script_dir`, the two default `Path(...)` lines, and both `if len(sys.argv) >` guards; the `.resolve()` calls on lines 150–151 fold into these assignments (data-model.md AFTER block; contracts/cli-contract.md "Hardcoded Defaults Removed")
 
 **Checkpoint**: `generate-resume.py` `main()` now starts with two guards (argc, empty string) followed by two direct `Path(sys.argv[N]).resolve()` assignments. No hardcoded path strings exist in `main()`. Running `python3 generate-resume.py` exits non-zero with a usage message. Running it with two valid args still produces HTML and PDF.
 
@@ -53,9 +53,9 @@
 
 ### Validation for User Story 1
 
-- [ ] T005 [US1] Run `./generate-resume.sh Charles_Donaldson_Resume-data.yaml Charles_Donaldson_Resume.html` from the repo root and verify: exit code is `0`, `Charles_Donaldson_Resume.html` is written, `Charles_Donaldson_Resume.pdf` is written alongside it (SC-003, SC-004; quickstart.md Primary Workflow)
+- [X] T005 [US1] Run `./generate-resume.sh Charles_Donaldson_Resume-data.yaml Charles_Donaldson_Resume.html` from the repo root and verify: exit code is `0`, `Charles_Donaldson_Resume.html` is written, `Charles_Donaldson_Resume.pdf` is written alongside it (SC-003, SC-004; quickstart.md Primary Workflow)
 
-- [ ] T006 [US1] Inspect `Charles_Donaldson_Resume.html` to confirm the generated content is substantively identical to pre-change output — name, contact, experience sections present and correctly formatted (FR-006: happy-path behavior must be identical)
+- [X] T006 [US1] Inspect `Charles_Donaldson_Resume.html` to confirm the generated content is substantively identical to pre-change output — name, contact, experience sections present and correctly formatted (FR-006: happy-path behavior must be identical)
 
 **Checkpoint**: Shell-script invocation succeeds end-to-end. SC-003 and SC-004 pass.
 
@@ -69,9 +69,9 @@
 
 ### Validation for User Story 3
 
-- [ ] T007 [P] [US3] Run `./generate-resume.sh` (zero args) and verify: a usage message showing the expected syntax is printed, exit code is non-zero (spec.md US3 Acceptance Scenario 1; contracts/cli-contract.md exit code table)
+- [X] T007 [P] [US3] Run `./generate-resume.sh` (zero args) and verify: a usage message showing the expected syntax is printed, exit code is non-zero (spec.md US3 Acceptance Scenario 1; contracts/cli-contract.md exit code table)
 
-- [ ] T008 [P] [US3] Run `./generate-resume.sh Charles_Donaldson_Resume-data.yaml` (one arg) and verify: a usage message is printed, exit code is non-zero, no HTML or PDF files are written (spec.md US3 Acceptance Scenario 2)
+- [X] T008 [P] [US3] Run `./generate-resume.sh Charles_Donaldson_Resume-data.yaml` (one arg) and verify: a usage message is printed, exit code is non-zero, no HTML or PDF files are written (spec.md US3 Acceptance Scenario 2)
 
 **Checkpoint**: Shell script regression gate passes. T007 and T008 can be run together (parallel invocations, independent).
 
@@ -85,13 +85,13 @@
 
 ### Validation for User Story 2
 
-- [ ] T009 [US2] Run `python3 generate-resume.py Charles_Donaldson_Resume-data.yaml Charles_Donaldson_Resume.html` directly (bypassing the shell script) and verify: exit code is `0`, `Charles_Donaldson_Resume.html` is written, `Charles_Donaldson_Resume.pdf` is written alongside it (spec.md US2 Acceptance Scenario 1; quickstart.md Direct Python Invocation)
+- [X] T009 [US2] Run `python3 generate-resume.py Charles_Donaldson_Resume-data.yaml Charles_Donaldson_Resume.html` directly (bypassing the shell script) and verify: exit code is `0`, `Charles_Donaldson_Resume.html` is written, `Charles_Donaldson_Resume.pdf` is written alongside it (spec.md US2 Acceptance Scenario 1; quickstart.md Direct Python Invocation)
 
-- [ ] T010 [P] [US2] Run `python3 generate-resume.py` (zero args) and verify: usage message printed to stderr, exit code `1`, no output files written (SC-001, SC-002)
+- [X] T010 [P] [US2] Run `python3 generate-resume.py` (zero args) and verify: usage message printed to stderr, exit code `1`, no output files written (SC-001, SC-002)
 
-- [ ] T011 [P] [US2] Run `python3 generate-resume.py Charles_Donaldson_Resume-data.yaml` (one arg) and verify: usage message printed to stderr, exit code `1`, no output files written (spec.md US4 Acceptance Scenario 2 — same Python guard covers US2 error cases)
+- [X] T011 [P] [US2] Run `python3 generate-resume.py Charles_Donaldson_Resume-data.yaml` (one arg) and verify: usage message printed to stderr, exit code `1`, no output files written (spec.md US4 Acceptance Scenario 2 — same Python guard covers US2 error cases)
 
-- [ ] T012 [P] [US2] Run `python3 generate-resume.py "" Charles_Donaldson_Resume.html` (empty-string first arg) and verify: usage message printed, exit code `1`, no files written (spec.md Edge Cases; data-model.md Validation Rules)
+- [X] T012 [P] [US2] Run `python3 generate-resume.py "" Charles_Donaldson_Resume.html` (empty-string first arg) and verify: usage message printed, exit code `1`, no files written (spec.md Edge Cases; data-model.md Validation Rules)
 
 **Checkpoint**: Direct Python invocation works identically to shell-script invocation for the happy path. All error cases exit loudly. US2 complete.
 
@@ -101,11 +101,11 @@
 
 **Purpose**: Final acceptance checks across all success criteria; confirm no residue of the old contract remains.
 
-- [ ] T013 Run SC-005 grep check: `grep -n 'resume_data\.yaml\|Charles_Donaldson_Resume\.html' generate-resume.py` — the strings must appear **only** outside `main()` (e.g., module docstring line 2); zero matches inside `main()` are required (spec.md SC-005; contracts/cli-contract.md "Hardcoded Defaults Removed")
+- [X] T013 Run SC-005 grep check: `grep -n 'resume_data\.yaml\|Charles_Donaldson_Resume\.html' generate-resume.py` — the strings must appear **only** outside `main()` (e.g., module docstring line 2); zero matches inside `main()` are required (spec.md SC-005; contracts/cli-contract.md "Hardcoded Defaults Removed")
 
-- [ ] T014 [P] Run the full quickstart.md validation checklist from `specs/001-fix-resume-args/quickstart.md` (all four `bash` code blocks in "Validation After Implementation") and confirm all assertions pass: SC-001+SC-002 (no-args fails), SC-003+SC-004 (happy path succeeds), SC-005 (grep clean)
+- [X] T014 [P] Run the full quickstart.md validation checklist from `specs/001-fix-resume-args/quickstart.md` (all four `bash` code blocks in "Validation After Implementation") and confirm all assertions pass: SC-001+SC-002 (no-args fails), SC-003+SC-004 (happy path succeeds), SC-005 (grep clean)
 
-- [ ] T015 [P] Review `generate-resume.py` `main()` inline comments for accuracy — remove or update any comment that referenced the old optional-override logic; add a brief comment above the argc guard explaining that both args are required (code clarity; no behavioral change)
+- [X] T015 [P] Review `generate-resume.py` `main()` inline comments for accuracy — remove or update any comment that referenced the old optional-override logic; add a brief comment above the argc guard explaining that both args are required (code clarity; no behavioral change)
 
 ---
 

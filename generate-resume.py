@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Generate Charles_Donaldson_Resume.html (and .pdf) from resume_data.yaml."""
+"""Generate <resume_filename>.html (and .pdf) from <resume_filename_data>.yaml."""
 
 import re
 import subprocess
@@ -138,17 +138,16 @@ def build_html(data):
 
 
 def main():
-    script_dir = Path(__file__).parent
-    data_file = script_dir / "resume_data.yaml"
-    output_file = script_dir / "Charles_Donaldson_Resume.html"
+    # Both arguments are required; no hardcoded fallback defaults.
+    if len(sys.argv) < 3:
+        print("usage: generate-resume.py resume_data.yaml output.html", file=sys.stderr)
+        sys.exit(1)
+    if sys.argv[1].strip() == "" or sys.argv[2].strip() == "":
+        print("usage: generate-resume.py resume_data.yaml output.html", file=sys.stderr)
+        sys.exit(1)
 
-    if len(sys.argv) > 1:
-        data_file = Path(sys.argv[1])
-    if len(sys.argv) > 2:
-        output_file = Path(sys.argv[2])
-
-    data_file = data_file.resolve()
-    output_file = output_file.resolve()
+    data_file = Path(sys.argv[1]).resolve()
+    output_file = Path(sys.argv[2]).resolve()
 
     with open(data_file, "r", encoding="utf-8") as f:
         data = yaml.safe_load(f)
