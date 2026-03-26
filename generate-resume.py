@@ -36,7 +36,7 @@ def nbsp(text):
     return text.replace("\u00a0", "&nbsp;")
 
 
-def build_html(data, company_details=False):
+def build_html(data, company_details=False, show_stack=False):
     p = data["personal"]
     meta = data["meta"]
     summary = data["summary"]
@@ -129,7 +129,8 @@ def build_html(data, company_details=False):
             w(f'        <li>{md_links(achievement.strip())}</li>')
         w(f'      </ul>')
         w(f'    </div>')
-        w(f'    <div class="stack">{stack_html(job["stack"])}</div>')
+        if show_stack:
+            w(f'    <div class="stack">{stack_html(job["stack"])}</div>')
         w(f'  </div>')
         w('')
 
@@ -167,7 +168,7 @@ def stack_txt(stack):
     return re.sub(r'\s*\|\s*', ', ', stack)
 
 
-def build_txt(data, company_details=False):
+def build_txt(data, company_details=False, show_stack=False):
     """Build a plain-text ATS-parsable resume from the YAML data."""
     personal = data["personal"]
     summary = data["summary"]
@@ -232,7 +233,8 @@ def build_txt(data, company_details=False):
         for achievement in job["achievements"]:
             achievement_text = strip_md_links(achievement.strip())
             w(wrap(achievement_text, indent="- ", subsequent_indent="  "))
-        w(f'Stack: {stack_txt(job["stack"])}')
+        if show_stack:
+            w(f'Stack: {stack_txt(job["stack"])}')
         if job_index < len(experience) - 1:
             w("")
             w(JOB_RULE)
@@ -269,6 +271,12 @@ def main():
         default=False,
         help="include company brief and stack in output (omitted by default)",
     )
+    parser.add_argument(
+        "--stack",
+        action="store_true",
+        default=False,
+        help="include role stack in output (omitted by default)",
+    )
     args = parser.parse_args()
 
     data_file = Path(args.data_file).resolve()
@@ -283,7 +291,7 @@ def main():
     with open(data_file, "r", encoding="utf-8") as f:
         data = yaml.safe_load(f)
 
-    html = build_html(data, company_details=args.company_details)
+    html = build_html(data, company_details=args.company_details, show_stack=args.stack)
 
     output_file = output_base.with_suffix(".html")
     with open(output_file, "w", encoding="utf-8") as f:
@@ -293,7 +301,7 @@ def main():
 
     # TXT (ATS-parsable plain text)
     txt_file = output_base.with_suffix(".txt")
-    txt = build_txt(data, company_details=args.company_details)
+    txt = build_txt(data, company_details=args.company_details, show_stack=args.stack)
     with open(txt_file, "w", encoding="utf-8") as f:
         f.write(txt)
     print(f"Generated: {txt_file}")
