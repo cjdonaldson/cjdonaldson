@@ -1,9 +1,10 @@
 #!/usr/bin/env python3
-"""Generate <resume_filename>.html (and .pdf) from <resume_filename_data>.yaml."""
+"""Generate <resume_filename>.html, .pdf, and .txt from <resume_filename_data>.yaml."""
 
 import re
 import subprocess
 import sys
+import textwrap
 from pathlib import Path
 
 try:
@@ -17,6 +18,11 @@ BRAVE = "/usr/bin/brave"
 def md_links(text):
     """Convert markdown [text](url) links to HTML <a> tags."""
     return re.sub(r'\[([^\]]+)\]\(([^)]+)\)', r'<a href="\2">\1</a>', text)
+
+
+def strip_md_links(text):
+    """Strip markdown [text](url) links to plain title text only."""
+    return re.sub(r'\[([^\]]+)\]\([^)]+\)', r'\1', text)
 
 
 def stack_html(stack):
@@ -137,6 +143,110 @@ def build_html(data):
     return "\n".join(lines) + "\n"
 
 
+TXT_WIDTH = 80
+SECTION_RULE = "=" * TXT_WIDTH
+JOB_RULE = "-" * TXT_WIDTH
+
+
+def wrap(text, indent="", subsequent_indent=None):
+    """Wrap text to TXT_WIDTH with optional indent and continuation indent."""
+    return textwrap.fill(
+        text.strip(),
+        width=TXT_WIDTH,
+        initial_indent=indent,
+        subsequent_indent=indent if subsequent_indent is None else subsequent_indent,
+    )
+
+
+def stack_txt(stack):
+    """Convert pipe-separated stack string to a comma-separated plain string."""
+    return re.sub(r'\s*\|\s*', ', ', stack)
+
+
+def build_txt(data):
+    """Build a plain-text ATS-parsable resume from the YAML data."""
+    personal = data["personal"]
+    summary = data["summary"]
+    skills = data["skills"]
+    experience = data["experience"]
+    education = data["education"]
+
+    lines = []
+    w = lines.append
+
+    # Header
+    w(personal["name"])
+    w(personal["location"])
+    w(personal["phone"])
+    w(personal["email"])
+    linkedin_display = personal["linkedin"].replace("https://", "").replace("http://", "")
+    w(f"LinkedIn: {linkedin_display}")
+    w("")
+
+    # Summary
+    w(SECTION_RULE)
+    w("SUMMARY")
+    w(SECTION_RULE)
+    w("")
+    w(wrap(strip_md_links(summary["statement"])))
+    w("")
+    for bullet in summary["bullets"]:
+        bullet_text = strip_md_links(bullet.strip())
+        w(wrap(bullet_text, indent="- ", subsequent_indent="  "))
+    w("")
+
+    # Skills
+    w(SECTION_RULE)
+    w("SKILLS")
+    w(SECTION_RULE)
+    w("")
+    skills_line = " | ".join(skills)
+    w(wrap(skills_line))
+    w("")
+
+    # Experience
+    w(SECTION_RULE)
+    w("EXPERIENCE")
+    w(SECTION_RULE)
+
+    for job_index, job in enumerate(experience):
+        w("")
+        w(job["title"])
+        w(f'{job["company"]} | {job["location"]}')
+        w(f'{job["start"]} - {job["end"]}')
+        w(f'Stack: {stack_txt(job["stack"])}')
+        w("")
+        w(wrap(strip_md_links(job["brief"])))
+        w("")
+        w(wrap(strip_md_links(job["description"])))
+        if job.get("description_additional"):
+            w("")
+            w(wrap(strip_md_links(job["description_additional"])))
+        w("")
+        for achievement in job["achievements"]:
+            achievement_text = strip_md_links(achievement.strip())
+            w(wrap(achievement_text, indent="- ", subsequent_indent="  "))
+        if job_index < len(experience) - 1:
+            w("")
+            w(JOB_RULE)
+
+    # Education
+    w("")
+    w(SECTION_RULE)
+    w("EDUCATION")
+    w(SECTION_RULE)
+    w("")
+    for edu in education:
+        w(edu["degree"])
+        w(f'{edu["institution"]} | {edu["location"]}')
+        w(f'GPA: {edu["gpa"]} | {edu["time"]}')
+        if edu.get("curriculum"):
+            w(f'Curriculum: {edu["curriculum"]}')
+
+    w("")
+    return "\n".join(lines) + "\n"
+
+
 def main():
     # Both arguments are required; no hardcoded fallback defaults.
     if len(sys.argv) < 3:
@@ -158,6 +268,13 @@ def main():
         f.write(html)
 
     print(f"Generated: {output_file}")
+
+    # TXT (ATS-parsable plain text)
+    txt_file = output_file.with_suffix(".txt")
+    txt = build_txt(data)
+    with open(txt_file, "w", encoding="utf-8") as f:
+        f.write(txt)
+    print(f"Generated: {txt_file}")
 
     # PDF via Brave headless
     pdf_file = output_file.with_suffix(".pdf")
