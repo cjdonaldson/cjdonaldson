@@ -1,6 +1,7 @@
 #!/usr/bin/env python3
 """Generate <resume_filename>.html, .pdf, and .txt from <resume_filename>-data.yaml."""
 
+import argparse
 import re
 import subprocess
 import sys
@@ -35,7 +36,7 @@ def nbsp(text):
     return text.replace("\u00a0", "&nbsp;")
 
 
-def build_html(data):
+def build_html(data, company_details=False):
     p = data["personal"]
     meta = data["meta"]
     summary = data["summary"]
@@ -112,9 +113,12 @@ def build_html(data):
         w(f'      <a href="{job["url"]}">{job["company"]}</a>, {job["location"]}')
         w(f'      <jdate>{job["start"]} to {job["end"]}</jdate>')
         w(f'    </company>')
-        w(f'    <brief>')
-        w(f'      {job["brief"].strip()}')
-        w(f'    </brief>')
+        if company_details:
+            w(f'    <brief>')
+            w(f'      {job["brief"].strip()}')
+            w(f'    </brief>')
+            if job.get("company_stack"):
+                w(f'    <div class="company-stack">{stack_html(job["company_stack"])}</div>')
         w(f'    <jtitle>{job["title"]}</jtitle>')
         w(f'    <jbrief>')
         w(f'      {job["description"].strip()}')
@@ -163,7 +167,7 @@ def stack_txt(stack):
     return re.sub(r'\s*\|\s*', ', ', stack)
 
 
-def build_txt(data):
+def build_txt(data, company_details=False):
     """Build a plain-text ATS-parsable resume from the YAML data."""
     personal = data["personal"]
     summary = data["summary"]
@@ -214,10 +218,12 @@ def build_txt(data):
         w(job["title"])
         w(f'{job["company"]} | {job["location"]}')
         w(f'{job["start"]} - {job["end"]}')
-        w(f'Stack: {stack_txt(job["stack"])}')
         w("")
-        w(wrap(strip_md_links(job["brief"])))
-        w("")
+        if company_details:
+            w(wrap(strip_md_links(job["brief"])))
+            if job.get("company_stack"):
+                w(f'Company Stack: {stack_txt(job["company_stack"])}')
+            w("")
         w(wrap(strip_md_links(job["description"])))
         if job.get("description_additional"):
             w("")
@@ -226,6 +232,7 @@ def build_txt(data):
         for achievement in job["achievements"]:
             achievement_text = strip_md_links(achievement.strip())
             w(wrap(achievement_text, indent="- ", subsequent_indent="  "))
+        w(f'Stack: {stack_txt(job["stack"])}')
         if job_index < len(experience) - 1:
             w("")
             w(JOB_RULE)
@@ -248,19 +255,27 @@ def build_txt(data):
 
 
 def main():
-    if len(sys.argv) < 2 or sys.argv[1].strip() == "":
-        print("usage: generate-resume.py <resume_filename>-data.yaml", file=sys.stderr)
-        sys.exit(1)
+    parser = argparse.ArgumentParser(
+        description="Generate resume files from a YAML data file.",
+    )
+    parser.add_argument(
+        "data_file",
+        metavar="<resume_filename>-data.yaml",
+        help="YAML source file; output files are derived by removing '-data.yaml'",
+    )
+    parser.add_argument(
+        "--company-details",
+        action="store_true",
+        default=False,
+        help="include company brief and stack in output (omitted by default)",
+    )
+    args = parser.parse_args()
 
-    data_file = Path(sys.argv[1]).resolve()
+    data_file = Path(args.data_file).resolve()
 
     data_stem = data_file.stem  # e.g. "Charles_Donaldson_Resume-data"
     if not data_stem.endswith("-data"):
-        print(
-            f"Error: data file name must end with '-data.yaml', got: {data_file.name}",
-            file=sys.stderr,
-        )
-        sys.exit(1)
+        parser.error(f"data file name must end with '-data.yaml', got: {data_file.name}")
 
     base_stem = data_stem[: -len("-data")]  # e.g. "Charles_Donaldson_Resume"
     output_base = data_file.parent / base_stem
@@ -268,7 +283,7 @@ def main():
     with open(data_file, "r", encoding="utf-8") as f:
         data = yaml.safe_load(f)
 
-    html = build_html(data)
+    html = build_html(data, company_details=args.company_details)
 
     output_file = output_base.with_suffix(".html")
     with open(output_file, "w", encoding="utf-8") as f:
@@ -278,7 +293,7 @@ def main():
 
     # TXT (ATS-parsable plain text)
     txt_file = output_base.with_suffix(".txt")
-    txt = build_txt(data)
+    txt = build_txt(data, company_details=args.company_details)
     with open(txt_file, "w", encoding="utf-8") as f:
         f.write(txt)
     print(f"Generated: {txt_file}")

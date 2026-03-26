@@ -5,7 +5,7 @@ SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
 
 if [ "$#" -lt 1 ]; then
 	echo
-	echo "usage: $0 <resume_filename>-data.yaml"
+	echo "usage: $0 <resume_filename>-data.yaml [--company-details]"
 	echo
 	exit 1
 fi
@@ -94,4 +94,4 @@ if ! command -v brave &>/dev/null; then
 	echo "Warning: 'brave' not found — PDF will not be generated." >&2
 fi
 
-python3 "$SCRIPT_DIR/generate-resume.py" "$1"
+python3 "$SCRIPT_DIR/generate-resume.py" "$@"
