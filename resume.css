@@ -142,3 +142,7 @@ div.job > div.achievements > li {
 .tight-bottom {
   margin-bottom: -0.5em;
 }
+
+@media print {
+  a:link { color: #3a3a7a; text-decoration: none; }
+}

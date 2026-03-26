@@ -252,7 +252,6 @@ def build_txt(data, company_details=False, show_stack=False):
         if edu.get("curriculum"):
             w(f'Curriculum: {edu["curriculum"]}')
 
-    w("")
     return "\n".join(lines) + "\n"
 
 
