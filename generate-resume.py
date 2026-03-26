@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Generate <resume_filename>.html, .pdf, and .txt from <resume_filename_data>.yaml."""
+"""Generate <resume_filename>.html, .pdf, and .txt from <resume_filename>-data.yaml."""
 
 import re
 import subprocess
@@ -248,36 +248,43 @@ def build_txt(data):
 
 
 def main():
-    # Both arguments are required; no hardcoded fallback defaults.
-    if len(sys.argv) < 3:
-        print("usage: generate-resume.py resume_data.yaml output.html", file=sys.stderr)
-        sys.exit(1)
-    if sys.argv[1].strip() == "" or sys.argv[2].strip() == "":
-        print("usage: generate-resume.py resume_data.yaml output.html", file=sys.stderr)
+    if len(sys.argv) < 2 or sys.argv[1].strip() == "":
+        print("usage: generate-resume.py <resume_filename>-data.yaml", file=sys.stderr)
         sys.exit(1)
 
     data_file = Path(sys.argv[1]).resolve()
-    output_file = Path(sys.argv[2]).resolve()
+
+    data_stem = data_file.stem  # e.g. "Charles_Donaldson_Resume-data"
+    if not data_stem.endswith("-data"):
+        print(
+            f"Error: data file name must end with '-data.yaml', got: {data_file.name}",
+            file=sys.stderr,
+        )
+        sys.exit(1)
+
+    base_stem = data_stem[: -len("-data")]  # e.g. "Charles_Donaldson_Resume"
+    output_base = data_file.parent / base_stem
 
     with open(data_file, "r", encoding="utf-8") as f:
         data = yaml.safe_load(f)
 
     html = build_html(data)
 
+    output_file = output_base.with_suffix(".html")
     with open(output_file, "w", encoding="utf-8") as f:
         f.write(html)
 
     print(f"Generated: {output_file}")
 
     # TXT (ATS-parsable plain text)
-    txt_file = output_file.with_suffix(".txt")
+    txt_file = output_base.with_suffix(".txt")
     txt = build_txt(data)
     with open(txt_file, "w", encoding="utf-8") as f:
         f.write(txt)
     print(f"Generated: {txt_file}")
 
     # PDF via Brave headless
-    pdf_file = output_file.with_suffix(".pdf")
+    pdf_file = output_base.with_suffix(".pdf")
     result = subprocess.run(
         [
             BRAVE,
