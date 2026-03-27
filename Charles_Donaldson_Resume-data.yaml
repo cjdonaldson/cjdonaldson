@@ -171,9 +171,6 @@ experience:
       - "Implemented a C, C++, and Python back-end to schedule, monitor, and execute tests across multiple racks
         of products under test."
       - "Implemented a Visual Basic .Net web front end to configure test scheduling, status, and present results."
-      - "Introduced and established National Instruments LabVIEW and TestStand as the standard automation tools for
-        system integration and test automation across multiple product lines achieving 25% to 80% reduction in test
-        times. I managed an offshore team providing architecture and design expectations."
       - "Implemented proprietary Wireshark protocol dissectors for CATV head-end and Switched Digital Video operational
         diagnostics."
       - "Implemented set-top box channel change simulation tool for Switched Digital Video load testing."
