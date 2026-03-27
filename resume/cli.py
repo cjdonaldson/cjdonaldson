@@ -22,8 +22,8 @@ def main():
     )
     parser.add_argument(
         "data_file",
-        metavar="<resume_filename>-data.yaml",
-        help="YAML source file; output files are derived by removing '-data.yaml'",
+        metavar="<resume_filename>-src.yaml",
+        help="YAML source file; output files are derived by removing '-src.yaml'",
     )
     parser.add_argument(
         "--company-details",
@@ -41,11 +41,11 @@ def main():
 
     data_file = Path(args.data_file).resolve()
 
-    data_stem = data_file.stem  # e.g. "Charles_Donaldson_Resume-data"
-    if not data_stem.endswith("-data"):
-        parser.error(f"data file name must end with '-data.yaml', got: {data_file.name}")
+    data_stem = data_file.stem  # e.g. "Charles_Donaldson_Resume-src"
+    if not data_stem.endswith("-src"):
+        parser.error(f"data file name must end with '-src.yaml', got: {data_file.name}")
 
-    base_stem = data_stem[: -len("-data")]  # e.g. "Charles_Donaldson_Resume"
+    base_stem = data_stem[: -len("-src")]  # e.g. "Charles_Donaldson_Resume"
     output_base = data_file.parent / base_stem
 
     with open(data_file, "r", encoding="utf-8") as yaml_file:
@@ -62,7 +62,7 @@ def main():
     print(f"Generated: {html_file}")
 
     # Formatted TXT (printer-friendly, 80-column wrapped)
-    formatted_txt_file = output_base.with_name(output_base.name + "-formatted").with_suffix(".txt")
+    formatted_txt_file = output_base.with_suffix(".prn.txt")
     formatted_txt_content = build_formatted_txt(
         data,
         company_details=args.company_details,

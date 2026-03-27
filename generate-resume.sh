@@ -5,7 +5,7 @@ SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
 
 if [ "$#" -lt 1 ]; then
 	echo
-	echo "usage: $0 <resume_filename>-data.yaml [--company-details] [--stack]"
+	echo "usage: $0 <resume_filename>-src.yaml [--company-details] [--stack]"
 	echo
 	exit 1
 fi

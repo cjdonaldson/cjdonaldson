@@ -78,4 +78,3 @@ EDUCATION
 Bachelor of Science in Electrical and Computer Engineering
 Lafayette College | Easton, Pennsylvania
 GPA: 3.5
-Curriculum: Analog, RF, Computer, FPGA, Software
