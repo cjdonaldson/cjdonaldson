@@ -1,3 +1,4 @@
 .metals/
 .vscode/
 *-etag
+__pycache__/
