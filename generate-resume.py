@@ -185,7 +185,7 @@ def stack_txt(stack):
     return re.sub(r'\s*\|\s*', ', ', stack)
 
 
-def build_txt(data, company_details=False, show_stack=False):
+def build_formatted_txt(data, company_details=False, show_stack=False):
     """Build a plain-text ATS-parsable resume from the YAML data."""
     personal = data["personal"]
     summary = data["summary"]
@@ -272,6 +272,86 @@ def build_txt(data, company_details=False, show_stack=False):
     return "\n".join(lines) + "\n"
 
 
+def normalize(text):
+    """Collapse all internal whitespace and newlines to single spaces."""
+    return " ".join(text.split())
+
+
+def build_ats_txt(data, company_details=False, show_stack=False):
+    """Build an ATS-ingest txt resume: no line wrapping, no indented continuations."""
+    personal = data["personal"]
+    summary = data["summary"]
+    skills = data["skills"]
+    experience = data["experience"]
+    education = data["education"]
+
+    lines = []
+    w = lines.append
+
+    # Header
+    w(personal["name"])
+    w(personal["location"])
+    w(personal["phone"])
+    w(personal["email"])
+    linkedin_display = personal["linkedin"].replace("https://", "").replace("http://", "")
+    w(f"LinkedIn: {linkedin_display}")
+    w("")
+
+    # Summary
+    w("SUMMARY")
+    w("")
+    w(normalize(strip_md_links(summary["statement"])))
+    w("")
+    for bullet in summary["bullets"]:
+        w(f'- {normalize(strip_md_links(bullet))}')
+    w("")
+
+    # Skills
+    w("SKILLS")
+    w("")
+    w(", ".join(skills))
+    w("")
+
+    # Experience
+    w("EXPERIENCE")
+
+    for job_index, job in enumerate(experience):
+        w("")
+        w(job["title"])
+        w(f'{job["company"]} | {job["location"]}')
+        w(f'{job["start"]} - {job["end"]}')
+        w("")
+        if company_details:
+            w(normalize(strip_md_links(job["brief"])))
+            if job.get("company_stack"):
+                w(f'Company Stack: {stack_txt(job["company_stack"])}')
+            w("")
+        w(normalize(strip_md_links(job["description"])))
+        if job.get("description_additional"):
+            w("")
+            w(normalize(strip_md_links(job["description_additional"])))
+        w("")
+        for achievement in job["achievements"]:
+            w(f'- {normalize(strip_md_links(achievement))}')
+        if show_stack:
+            w(f'Stack: {stack_txt(job["stack"])}')
+        if job_index < len(experience) - 1:
+            w("")
+
+    # Education
+    w("")
+    w("EDUCATION")
+    w("")
+    for edu in education:
+        w(edu["degree"])
+        w(f'{edu["institution"]} | {edu["location"]}')
+        w(f'GPA: {edu["gpa"]}')
+        if edu.get("curriculum"):
+            w(f'Curriculum: {edu["curriculum"]}')
+
+    return "\n".join(lines) + "\n"
+
+
 def main():
     parser = argparse.ArgumentParser(
         description="Generate resume files from a YAML data file.",
@@ -315,12 +395,19 @@ def main():
 
     print(f"Generated: {output_file}")
 
-    # TXT (ATS-parsable plain text)
-    txt_file = output_base.with_suffix(".txt")
-    txt = build_txt(data, company_details=args.company_details, show_stack=args.stack)
-    with open(txt_file, "w", encoding="utf-8") as f:
-        f.write(txt)
-    print(f"Generated: {txt_file}")
+    # Formatted TXT (printer-friendly, 80-column wrapped)
+    formatted_txt_file = output_base.with_name(output_base.name + "-formatted").with_suffix(".txt")
+    formatted_txt = build_formatted_txt(data, company_details=args.company_details, show_stack=args.stack)
+    with open(formatted_txt_file, "w", encoding="utf-8") as f:
+        f.write(formatted_txt)
+    print(f"Generated: {formatted_txt_file}")
+
+    # ATS TXT (no line wrapping, no indented continuations)
+    ats_txt_file = output_base.with_suffix(".txt")
+    ats_txt = build_ats_txt(data, company_details=args.company_details, show_stack=args.stack)
+    with open(ats_txt_file, "w", encoding="utf-8") as f:
+        f.write(ats_txt)
+    print(f"Generated: {ats_txt_file}")
 
     # PDF via Brave headless
     pdf_file = output_base.with_suffix(".pdf")
