@@ -105,8 +105,8 @@ def build_html(data, company_details=False, show_stack=False):
     # Education
     w('  <sectionName>Education</sectionName>')
     for edu in education:
-        w(f'  {edu["degree"]}')
-        w(f'  {edu["institution"]}, {edu["location"]}<br />')
+        w(f'  {edu["degree"]}<br />')
+        w(f'  {edu["institution"]}, {edu["location"]}')
 
     w('')
     w('</body>')
