@@ -14,23 +14,24 @@ business domain.
 
 - Over a decade in back-end async concurrent services written in Scala, Play
   framework, Akka, Cats, and FS2.
-- Implementer of asynchronous event back-end services and APIs design.
+- Implementer of asynchronous event back-end services and API design.
 - Effective communications and team collaboration.
 - Advocate of expressive data types - ADT, GADT - codifying correct behaviors
   preventing illegal states.
 - Behavior, Data, and Test driven design and testing behaviors (customer goals,
-  behaviors, and workflows)
-- Experienced in monolith, distributed (right sized) services, and distributed
+  behaviors, and workflows).
+- Experienced in monolith, distributed (right-sized) services, and distributed
   monolith.
-- Remote since 2015 - long before COVID and corporate embraced the benefits
+- Remote since 2015 - long before COVID and corporate embraced the benefits of
+  more balanced employees.
 
 ================================================================================
 SKILLS
 ================================================================================
 
-Iterative practices | API | System design | Git management | Functional | Back /
-Front end | AWS infrastructure | Docker | Streaming | SQL | Resource management
-| Scripting
+Agile practices, API, System design, Git, Functional Programming
+Back-end / Front-end, AWS infrastructure, Docker, Streaming, SQL
+Resource management, Scripting
 
 ================================================================================
 EXPERIENCE
@@ -42,24 +43,23 @@ Feb 2020 - Feb 2026
 
 Joined TST to apply skills and understanding of Scala, Akka, and Kafka to the
 cruise inventory data load services. Team reorganized resulting in a role change
-becoming intimate with cruise booking work flows. Assisting Product Owner with
-customer issues and satisfaction. A subject matter expert, leveraging historical
-knowledge of the codebase and project context. Collaboration, removing
-obstacles, and connecting team members with cross functional members.
-Responsibilities encompass managing and coordinating the team's efforts,
-overseeing migrations and upgrades, and actively contributing to the ongoing
-development of the cruise product. Encouraging and facilitating the use of type
-system to codify correct behaviors and prevent illegal states.
+into a deep understanding of the cruise booking workflows. Assisted Product
+Owner with customer issues and satisfaction. Served as a subject matter expert,
+leveraging historical knowledge of the codebase and project context during
+collaboration, removing obstacles, and connecting team members with cross-
+functional members. Responsibilities encompassed managing and coordinating the
+team's efforts, overseeing migrations and upgrades, and actively contributing to
+the ongoing development of the cruise product. Encouraged and facilitated the
+use of type system to codify correct behaviors and prevent illegal states.
 
 - Worked with Product Owner to convey product behavior given cruise line vendor
-  API responses or what is missing.
-- Meetings with TST consumers (AAA clubs) to understand and provide options to
+  API responses including what was missing.
+- Met with TST consumers (AAA clubs) to understand and provide options to
   resolve workflow issues.
 - Refactored significant portions of the cruise Scala Play back-end services
   while adding behavior driven design tests to ensure continued expectations
   during code cleaning and avoid regressions.
-- Subject matter expert of cruise booking and post booking cruise booking
-  operations, and booking maintenance.
+- Served as subject matter expert of cruise booking operations.
 - Defined booking and post booking enhancements and processing for transparency
   of payments status and booking recovery for TST customers (booking agents) and
   consumers.
@@ -70,79 +70,75 @@ Senior Software Engineer
 1010data | New York, New York
 Mar 2018 - Nov 2019
 
-Implementing a new user tool to address an entry point for 1010data customers.
-This provided spreadsheet and graphical views as incremental processing steps
-are applied during ingest, transform, and analysis of customer data that can be
-applied to the full data set. I provided Scala back-end services coordinating
-multi-gigabyte uploads via a chunking process while injecting a sample into the
-1010data database API for data visualization of the transformations.
+Implemented a new user tool to reduce the barrier into data analysis for
+1010data customers. This provided spreadsheet and graphical views as incremental
+processing steps were applied during ingest, transform, and analysis of customer
+data that could be applied to the full data set. I provided Scala back-end
+services coordinating multi-gigabyte uploads via a chunking process while
+injecting a sample into the 1010data database API for data visualization of the
+transformations.
 
-- ~70% of my time in Scala Play back-end REST services integrating UI and
-  infrastructure requirements
-- Integrating the Scala AWS SDK to provide coordination of S3 indexes and
-  aggregation for the upload process
+- Spent 70% of time in Scala Play back-end REST services integrating UI and
+  infrastructure requirements.
+- Integrated the Scala AWS SDK to provide coordination of S3 indexes and
+  aggregation for the upload process.
 - Presented company tech talks on Scala fundamentals and practices: Future,
-  Collections, For Comprehension, Type Class.
-- ~20% of my time implementing customer UI: Vue, Vuex, and TypeScript.
+  Collections, For Comprehension, and Type Class.
+- Spent 20% of time implementing customer UI: Vue, Vuex, and TypeScript.
 - Championed the integration of TypeScript that reduced UI and API call bugs.
-- Scrum master and production deployments
+- Served as Scrum master and coordinated production deployments.
 
 --------------------------------------------------------------------------------
 
 Software Engineer
-ARRIS | Horsham, Pennsylvania: CCAD LLC Joint Venture
+ARRIS | Horsham, Pennsylvania, CCAD LLC Joint Venture
 May 2015 - Dec 2017
 
 Moved into this role to advance the distributed tiered topology to configure,
 manage, and propagate streaming video metadata - channel maps, guides, crypto
 keys, spectrum configuration. This was a shift into the Scala language using
-Cats, FS2, and Kafka. This is an eventual consistency system with the types and
+Cats, FS2, and Kafka. This was an eventual consistency system with the types and
 rates of the messaging.
 
-This is a multi-service tiered architecture that managed cryptographic keys for
+This was a multi-service tiered architecture that managed cryptographic keys for
 encrypted content delivery, TV guide data streams, channel plan changes, dynamic
-VOD / NVOD channel assignments, edge configuration. Utilizing Kafka pub/sub with
+VOD / NVOD channel assignments, edge configuration. Utilized Kafka pub/sub with
 Akka streams – graphs and flows – to process, augment or refine messages, and
 direct the emission of transformed messages in the Scala language and
 frameworks. API implementation via Akka HTTP and JSON payloads. Inter-service
-messages encode via Avro for efficient high volume traffic. My responsibilities
-include developing pipeline flows, Avro migration, Akka persistence and eventual
-consistency resolutions. Involved in BitBucket code repository management,
-Bamboo build systems, and VMWare hardware virtualization for deployed code.
-Additional responsibilities included managing Scala version breaking changes
-during core and library upgrades. An active participant in product planning and
-sprint grooming with product owners. As well as resolving customer maintenance
-and issues.
+messages were encoded via Avro for efficient high volume traffic. My
+responsibilities included developing pipeline flows, managing Avro migration,
+implementing Akka persistence and eventual consistency resolutions. Participated
+in BitBucket code repository management, Bamboo build systems, and VMWare
+hardware virtualization for deployed code. Additional responsibilities included
+managing Scala version breaking changes during core and library upgrades.
+Resolved maintenance and customer reported issues.
 
-- Transitioned to a Scala back-end team where I cut my teeth by migrating the
-  code base to Java 1.8 and Scala 2.10 gaining performance and library
-  improvements.
+- Transitioned to a Scala back-end team where I developed Scala skills by
+  migrating the codebase to Java 1.8 and Scala 2.10 achieving performance and
+  library improvements.
 - Coordinated with Product Owner and Product Manager in product planning and
   sprint grooming.
 
 --------------------------------------------------------------------------------
 
 System Integration and Test Automation and Tools Engineering
-ARRIS | Horsham, Pennsylvania: Motorola Mobility
+ARRIS | Horsham, Pennsylvania, Motorola Mobility
 Apr 1996 - May 2015
 
-Prior achievements in Integration and Test Automation lead to increased
+Prior achievements in Integration and Test Automation led to increased
 responsibilities to architect and lead the development of a scalable test
 automation framework to support concurrent qualification testing of multiple
 product lines within the ARRIS CableTV hardware manufacturing using racked
 servers and specialized test equipment.
 
-- Architect and Lead of a team of 10 engineers – 6 offshore and 4 US -
-  developing the services to facilitate concurrent product qualification
-  testing. A scalable automation framework for single product to multiple
-  product testing. Implemented a C, C++, and Python back-end to schedule,
-  monitor, and execute tests across multiple racks of products under test.
-  Implemented a Visual Basic .Net web front end to configure test scheduling,
+- Architected and led a team of 10 engineers - 6 offshore and 4 US - developing
+  the services to facilitate concurrent product qualification testing. A
+  scalable automation framework for single product to multiple product testing.
+- Implemented a C, C++, and Python back-end to schedule, monitor, and execute
+  tests across multiple racks of products under test.
+- Implemented a Visual Basic .Net web front end to configure test scheduling,
   status, and present results.
-- Introduced and established National Instruments LabVIEW and TestStand as the
-  standard automation tools for system integration and test automation across
-  multiple product lines achieving 25% to 80% reduction in test times. I managed
-  an offshore team providing architecture and design expectations.
 - Implemented proprietary Wireshark protocol dissectors for CATV head-end and
   Switched Digital Video operational diagnostics.
 - Implemented set-top box channel change simulation tool for Switched Digital
@@ -152,7 +148,7 @@ servers and specialized test equipment.
 EDUCATION
 ================================================================================
 
-Bachelors in Science for Electrical and Computer Engineering
-Lafayette College | Easton Pennsylvania
-GPA: 3.5 | 2002 - 2009 evenings; full time employment
-Curriculum: analog, RF, Computer, FPGA, software
+Bachelor of Science in Electrical and Computer Engineering
+Lafayette College | Easton, Pennsylvania
+GPA: 3.5
+Curriculum: Analog, RF, Computer, FPGA, Software
