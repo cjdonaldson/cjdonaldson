@@ -163,6 +163,23 @@ def wrap(text, indent="", subsequent_indent=None):
     )
 
 
+def join_items_no_break(items):
+    """Join items with ', ', never breaking a single item across lines."""
+    result_lines = []
+    current_line = ""
+    for item in items:
+        candidate = item if not current_line else f"{current_line}, {item}"
+        if len(candidate) <= TXT_WIDTH:
+            current_line = candidate
+        else:
+            if current_line:
+                result_lines.append(current_line)
+            current_line = item
+    if current_line:
+        result_lines.append(current_line)
+    return "\n".join(result_lines)
+
+
 def stack_txt(stack):
     """Convert pipe-separated stack string to a comma-separated plain string."""
     return re.sub(r'\s*\|\s*', ', ', stack)
@@ -205,8 +222,8 @@ def build_txt(data, company_details=False, show_stack=False):
     w("SKILLS")
     w(SECTION_RULE)
     w("")
-    skills_line = " | ".join(skills)
-    w(wrap(skills_line))
+    skills_text = join_items_no_break(skills)
+    w(skills_text)
     w("")
 
     # Experience
@@ -248,7 +265,7 @@ def build_txt(data, company_details=False, show_stack=False):
     for edu in education:
         w(edu["degree"])
         w(f'{edu["institution"]} | {edu["location"]}')
-        w(f'GPA: {edu["gpa"]} | {edu["time"]}')
+        w(f'GPA: {edu["gpa"]}')
         if edu.get("curriculum"):
             w(f'Curriculum: {edu["curriculum"]}')
 
