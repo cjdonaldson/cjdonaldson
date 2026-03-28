@@ -74,7 +74,8 @@ def build_html(data, company_details=False, show_stack=False):
     w('')
 
     # Experience
-    for job in experience:
+    included_jobs = [job for job in experience if job.get("include", True)]
+    for job in included_jobs:
         css_class = 'job print-break' if job.get('print_break') else 'job'
         w(f'  <div class="{css_class}">')
         w(f'    <company>')

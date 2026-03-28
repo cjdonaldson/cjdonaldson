@@ -19,8 +19,7 @@ summary:
     - a statement specifically how or why your combined background aligns with target role / employer.
   bullets:
     - "Over a decade in back-end async concurrent services written in [Scala](https://www.scala-lang.org/),
-      [Play framework](https://www.playframework.com/), [Akka](https://doc.akka.io/),
-      [Cats](https://typelevel.org/cats/), and [FS2](https://fs2.io/#/)."
+      [Play framework](https://www.playframework.com/), [Cats](https://typelevel.org/cats/)."
     - "Implementer of asynchronous event back-end services and API design."
     - "Effective communications and team collaboration."
     - "Advocate of [expressive data types - ADT, GADT -](https://docs.scala-lang.org/scala3/book/types-adts-gadts.html)
@@ -40,18 +39,20 @@ summary:
     - "If you are not testing your code, you do not know how it works. If you are not testing customer needs, you are not delivering value."
 
 skills:
-  - Agile practices
   - API
-  - System design
-  - Git
-  - Functional Programming
-  - Back-end / Front-end
   - AWS infrastructure
+  - Agile practices
+  - Back-end / Front-end
   - Docker
-  - Streaming
-  - SQL
+  - Functional Programming
+  - Git
+  - GitHub
+  - GitHub CI/CD
   - Resource management
+  - SQL
   - Scripting
+  - Streaming
+  - System design
 
 experience:
   - company: Travel Syndicated Technology (TST LLC)
@@ -60,6 +61,7 @@ experience:
     start: Feb 2020
     end: Feb 2026
     company_stack: Scala, Play, Twirl, Kafka | Angular, React | AWS
+    include: true
     print_break: false
     title: Senior Software Engineer
     brief: >
@@ -82,13 +84,14 @@ experience:
         [behavior driven design tests](https://www.agilealliance.org/glossary/bdd/)
         to ensure continued expectations during code cleaning and avoid regressions."
       - "Served as subject matter expert of cruise booking operations."
-      - "Defined booking and post booking enhancements and processing for transparency of payments status and booking
+      - "Defined booking and post booking enhancements and processing for transparency of payments completion and status, and booking
         recovery for TST customers (booking agents) and consumers."
+      - "Utilized GitHub for source control and GitHub Actions for CI/CD pipeline automation."
     achievements_additional:
       - "70+% time resolving and propagating changes to improve the 8 Scala Play based services that impact the cruise shopping, book, and synchronization."
       - "Applying AWS Kubernettes production configuration and patches."
       - "Scrum master role coordinating product owner, team members expectations, and team load."
-    stack: "Scala, Play, concurrency, async API | Twirl, JavaScript | Docker"
+    stack: "Scala, Play, concurrency, async API | Twirl, JavaScript | Docker, GitHub, GitHub Actions"
 
   - company: 1010data
     url: https://www.1010data.com
@@ -96,6 +99,7 @@ experience:
     start: Mar 2018
     end: Nov 2019
     company_stack: Scala, Play, C, C++, K | VueJs | AWS
+    include: true
     print_break: true
     title: Senior Software Engineer
     brief: >
@@ -113,8 +117,9 @@ experience:
       - "Presented company tech talks on Scala fundamentals and practices: Future, Collections, For Comprehension, and Type Class."
       - "Spent 20% of time implementing customer UI: Vue, Vuex, and TypeScript."
       - "Championed the integration of TypeScript that reduced UI and API call bugs."
+      - "Utilized GitHub for cloud-based source control and repository management."
       - "Served as Scrum master and coordinated production deployments."
-    stack: "Scala, Play, AWS SDK | VueJs, JavaScript, TypeScript | AWS: EBS, EC2, ELB, S3"
+    stack: "Scala, Play, AWS SDK | VueJs, JavaScript, TypeScript | AWS: EBS, EC2, ELB, S3 | GitHub"
 
   - company: ARRIS
     url: http://www.arris.com
@@ -122,6 +127,7 @@ experience:
     start: May 2015
     end: Dec 2017
     company_stack: Scala, Cats, FS2, Akka, Kafka | ScalaJs | BitBucket, VMWare VM
+    include: true
     print_break: false
     title: Software Engineer
     brief: >
@@ -155,6 +161,7 @@ experience:
     start: Apr 1996
     end: May 2015
     company_stack: C, C++, Embedded, Scala, Cats, FS2, Akka, Kafka | ScalaJs | BitBucket, VMWare VM
+    include: true
     print_break: false
     title: System Integration and Test Automation and Tools Engineering
     brief: >
@@ -168,8 +175,8 @@ experience:
       - "Architected and led a team of 10 engineers - 6 offshore and 4 US - developing the services to facilitate
         concurrent product qualification testing. A scalable automation framework for single product to multiple product
         testing."
-      - "Implemented a C, C++, and Python back-end to schedule, monitor, and execute tests across multiple racks
-        of products under test."
+      - "Implemented in C, C++, and Python to schedule, monitor, and execute tests across multiple racks of products."
+    achievements_archived:
       - "Implemented a Visual Basic .Net web front end to configure test scheduling, status, and present results."
       - "Implemented proprietary Wireshark protocol dissectors for CATV head-end and Switched Digital Video operational
         diagnostics."

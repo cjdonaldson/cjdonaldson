@@ -81,7 +81,8 @@ def build_formatted_txt(data, company_details=False, show_stack=False):
     w("EXPERIENCE")
     w(SECTION_RULE)
 
-    for job_index, job in enumerate(experience):
+    included_jobs = [job for job in experience if job.get("include", True)]
+    for job_index, job in enumerate(included_jobs):
         w("")
         w(job["title"])
         w(f'{job["company"]} | {job["location"]}')

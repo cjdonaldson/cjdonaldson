@@ -13,7 +13,7 @@ prevents illegal states and boolean blindness. Architecting solutions across the
 business domain.
 
 - Over a decade in back-end async concurrent services written in Scala, Play
-  framework, Akka, Cats, and FS2.
+  framework, Cats.
 - Implementer of asynchronous event back-end services and API design.
 - Effective communications and team collaboration.
 - Advocate of expressive data types - ADT, GADT - codifying correct behaviors
@@ -29,9 +29,9 @@ business domain.
 SKILLS
 ================================================================================
 
-Agile practices, API, System design, Git, Functional Programming
-Back-end / Front-end, AWS infrastructure, Docker, Streaming, SQL
-Resource management, Scripting
+API, AWS infrastructure, Agile practices, Back-end / Front-end, Docker
+Functional Programming, Git, GitHub, GitHub CI/CD, Resource management, SQL
+Scripting, Streaming, System design
 
 ================================================================================
 EXPERIENCE
@@ -61,8 +61,10 @@ use of type system to codify correct behaviors and prevent illegal states.
   during code cleaning and avoid regressions.
 - Served as subject matter expert of cruise booking operations.
 - Defined booking and post booking enhancements and processing for transparency
-  of payments status and booking recovery for TST customers (booking agents) and
-  consumers.
+  of payments completion and status, and booking recovery for TST customers
+  (booking agents) and consumers.
+- Utilized GitHub for source control and GitHub Actions for CI/CD pipeline
+  automation.
 
 --------------------------------------------------------------------------------
 
@@ -86,6 +88,7 @@ transformations.
   Collections, For Comprehension, and Type Class.
 - Spent 20% of time implementing customer UI: Vue, Vuex, and TypeScript.
 - Championed the integration of TypeScript that reduced UI and API call bugs.
+- Utilized GitHub for cloud-based source control and repository management.
 - Served as Scrum master and coordinated production deployments.
 
 --------------------------------------------------------------------------------
@@ -135,14 +138,8 @@ servers and specialized test equipment.
 - Architected and led a team of 10 engineers - 6 offshore and 4 US - developing
   the services to facilitate concurrent product qualification testing. A
   scalable automation framework for single product to multiple product testing.
-- Implemented a C, C++, and Python back-end to schedule, monitor, and execute
-  tests across multiple racks of products under test.
-- Implemented a Visual Basic .Net web front end to configure test scheduling,
-  status, and present results.
-- Implemented proprietary Wireshark protocol dissectors for CATV head-end and
-  Switched Digital Video operational diagnostics.
-- Implemented set-top box channel change simulation tool for Switched Digital
-  Video load testing.
+- Implemented in C, C++, and Python to schedule, monitor, and execute tests
+  across multiple racks of products.
 
 ================================================================================
 EDUCATION
