@@ -1,0 +1,161 @@
+Charles Donaldson
+Riegelsville, Pennsylvania 18077
+(267) 772-0765
+charles.j.donaldson@gmail.com
+LinkedIn: LinkedIn.com/in/charlesdonaldson
+
+================================================================================
+Professional Summary
+================================================================================
+
+Senior Back-End Engineer | Scala & Microservices | 10+ Years
+
+Senior Back-End Engineer with 10+ years building asynchronous, scalable back-end
+services in Scala, Play Framework, and Akka. As a customer-driven, test-first
+engineer, I specialize in functional programming paradigms—Algebraic Data Types
+(ADT), Generalized Algebraic Data Types (GADT)—to enforce type safety and
+prevent illegal state representation. Architected and delivered incremental
+behavior solutions across distributed systems, RESTful and RPC APIs, and
+monolithic applications serving cross-functional teams and business domains.
+
+Advocate for Behavior-Driven Design, Test-Driven Development, and Data-Driven
+Design to codify correct behaviors, ensure customer value delivery, and maintain
+code quality through evolution. Demonstrated leadership coordinating cross-
+functional initiatives, mentoring team members, and delivering solutions that
+reduce complexity and improve developer experience. Proven track record: led
+Scala migration improving performance 10%, refactored 30% of microservice
+codebase while maintaining stability, increased payment transparency 70%, and
+championed TypeScript adoption reducing UI/API bugs across the organization.
+
+Seeking roles where I can architect robust back-end services, mentor engineers
+in functional programming practices, and drive technical excellence in
+distributed systems and microservice architectures.
+
+- Over a decade in back-end async concurrent services written in Scala, Play
+  framework, Cats.
+- Implementer of asynchronous back-end services, RESTful and RPC API design.
+- Effective communications and team collaboration.
+- Advocate of expressive data types - Algebraic Datatypes (ADT), Generalized
+  Algebraic Datatypes (GADT) - codifying correct behaviors and preventing
+  illegal states.
+- Behavior, Data, and Test driven design and testing behaviors (customer goals,
+  behaviors, and workflows).
+- Experienced in monolith, distributed (right-sized, microservice) services, and
+  distributed monolith.
+
+================================================================================
+Skills
+================================================================================
+
+Scala, SQL, Play Framework, Akka, Cats, FS2, AWS infrastructure, Docker, Git
+GitHub, GitHub CI/CD, Agile practices, Functional Programming
+Behavior-Driven Design, Test-Driven Design, Domain-Driven Design
+
+================================================================================
+Experience
+================================================================================
+
+Senior Software Engineer
+Travel Syndicated Technology (TST LLC), (Remote) | Alpharetta, Georgia
+Feb 2020 - Feb 2026
+
+Joined TST to apply skills and understanding of Scala, Akka, and Kafka to the
+cruise inventory data load services. Team reorganized changing my role to dive
+deep into understanding the cruise booking workflows. The cruise product was a
+distributed monolith architecture using 5 Scala Play services and MySQL.
+Assisted Product Owner with customer issues and satisfaction. Served as a
+subject matter expert, leveraging historical knowledge of the codebase and
+project context during collaboration, removing obstacles, and connecting team
+members with cross-functional members. Responsibilities encompassed managing and
+coordinating the team's efforts, overseeing migrations and upgrades, and
+actively contributing to the ongoing development of the cruise product.
+Encouraged and facilitated the use of type system to codify correct behaviors
+and prevent illegal states.
+
+- Met with TST's 4 largest AAA clubs to understand and provide options to
+  implement or refine their workflows.
+- Collaborated with Product Owner to convey product behavior given cruise line
+  vendor API responses including what was missing to assist the customer in
+  understanding presentation issues.
+- Refactored 30% portions of the cruise Scala Play back-end RESTful
+  microservices while adding behavior driven design tests to increase product
+  stability and ensure continued expectations during code cleaning and avoid
+  regressions.
+- Served as subject matter expert collaborating with 4 team members regarding
+  cruise booking operations, feature additions, and process improvements.
+- Defined and implemented pre and post booking enhancements and processing for a
+  70% increase in transparency of payment completion and status.
+- Utilized GitHub and GitHub Actions for CI/CD pipeline automation for cruise's
+  7 repositories.
+
+--------------------------------------------------------------------------------
+
+Senior Software Engineer
+1010data, (Remote) | New York, New York
+Mar 2018 - Nov 2019
+
+Implemented a new user tool to reduce the barrier into data analysis for
+1010data customers. This provided spreadsheet and graphical views as incremental
+processing steps were applied during ingest, transform, and analysis of customer
+data that could be applied to the full data set. I provided Scala back-end
+RESTful services coordinating multi-gigabyte uploads via a chunking process
+while injecting a sample into the 1010data database API for data visualization
+of the transformations. This tool was a monolith running on EC2 instances with
+ELB and S3 resources.
+
+- Allocated 70% of time in Scala Play back-end REST services integrating UI and
+  infrastructure requirements.
+- Integrated the Scala AWS SDK to provide coordination of S3 indexes and
+  aggregation for the upload process.
+- Presented company tech talks on Scala fundamentals and practices: Future,
+  Collections, For Comprehension, and Type Class.
+- Allocated 20% of time implementing customer UI supporting the file upload and
+  ingest visualization: HTML, CSS, JavaScript, Vue, Vuex, and TypeScript.
+- Championed the integration of TypeScript into the source code which reduced UI
+  and API bugs improving overall developer experience.
+- Utilized GitHub for cloud-based source control and repository management.
+- Served as Scrum Master working with the Team Manager and Product Owner to
+  coordinate sprint planning and feature presentation.
+
+--------------------------------------------------------------------------------
+
+Software Engineer
+ARRIS, (Remote) | Horsham, Pennsylvania, CCAD LLC Joint Venture
+May 2015 - Dec 2017
+
+Advanced into this role with a company restructuring to add features and resolve
+issues in the distributed tiered CATV management topology. Five application
+services provided configuration, control, and propagated streaming video
+metadata - channel maps, guides, crypto keys, spectrum configuration.
+Transitioned to the Scala language and libraries - Cats, FS2, and Kafka.
+
+This was a multi-service tiered architecture that managed cryptographic keys for
+encrypted content delivery, TV guide data streams, channel plan changes, dynamic
+Video On Demand (VOD) / Near Video On Demand (NVOD) channel assignments, edge
+configuration. Utilized Kafka pub/sub with Akka streams – graphs and flows – to
+process, augment or refine messages, and direct the emission of transformed
+messages in the Scala language and frameworks. API implementation via Akka HTTP
+and JSON payloads. Inter-service messages were encoded via Avro for efficient
+high volume traffic. My responsibilities included developing pipeline flows,
+managing Avro migration, implementing Akka persistence and eventual consistency
+resolutions. Participated in BitBucket code repository management, Bamboo build
+systems, and VMWare hardware virtualization for deployed code. Additional
+responsibilities included managing Scala version breaking changes during core
+and library upgrades. Resolved maintenance and customer reported issues.
+
+- Transitioned to a Scala back-end team where I developed Scala skills by
+  migrating the codebase to Java 1.8 and Scala 2.10 achieving 10% performance
+  improvements.
+- Managed feature augmentation to pass additional metadata through the Akka
+  stream processing, Kafka events requiring Avro updates and sign-off.
+- Collaborated with Product Owner and Product Manager in product planning and
+  sprint grooming.
+
+--------------------------------------------------------------------------------
+
+================================================================================
+Education
+================================================================================
+
+Bachelor of Science in Electrical and Computer Engineering
+Lafayette College | Easton, Pennsylvania

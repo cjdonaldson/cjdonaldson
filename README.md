@@ -59,6 +59,7 @@
 resume:
   [HTML](https://htmlpreview.github.io/?https://github.com/cjdonaldson/cjdonaldson/blob/main/Charles_Donaldson_Resume.html)
   [PDF](https://github.com/cjdonaldson/cjdonaldson/blob/main/Charles_Donaldson_Resume.pdf)
+  [TXT](https://github.com/cjdonaldson/cjdonaldson/blob/main/Charles_Donaldson_Resume.prn.txt)
 
 <h3>Beginnings</h3>
 

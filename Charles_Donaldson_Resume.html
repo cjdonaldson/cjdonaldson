@@ -4,60 +4,40 @@
 <head>
   <meta charset="UTF-8">
   <meta name="description" content="Charles Donaldson's Resume">
-  <meta name="keywords" content="Software Engineer, Scala, Functional Programming, Concurrency, Asynchronous API">
+  <meta name="keywords" content="Software Engineer, Functional Programming, Concurrency, Asynchronous API">
   <meta name="author" content="Charles Donaldson">
 
   <title>Charles Donaldson Resume</title>
   <link rel="stylesheet" href="resume.css">
+  <style>
+    @media print { @page { size: letter; margin: 13mm 13mm; } body { margin: 0; } }
+  </style>
 </head>
 
 <body>
   <div class="resume-title">Charles Donaldson</div>
   <hr />
   <div class="contact-grid">
-    <div>Riegelsville, Pennsylvania 18077-0495</div>
+    <div>Riegelsville, Pennsylvania 18077</div>
     <div><a href="mailto:charles.j.donaldson@gmail.com">charles.j.donaldson@gmail.com</a></div>
-    <div>267.772.0765</div>
+    <div>(267) 772-0765</div>
     <div><a href="https://LinkedIn.com/in/charlesdonaldson">LinkedIn.com/in/charlesdonaldson</a></div>
   </div>
 
   <div>
     <sectionName><!-- Summary --></sectionName>
     <div class="summary">
-      <div class="summary-grid"> <!-- 2 - 3 targeted job titles -->
-        <div>Senior Software Engineer</div>
-        <div>Scala Functional</div>
-        <div>Software Architect</div>
-      </div>
-      <!--
-      If you are not testing your code, then you do not know if it works.
-      If you are not testing what the customer wants, then you are not delivering what they need.
-      Let me help deliver incremental customer driven behavior solutions.
-      -->
-      <!-- Customer-driven, test-first engineer delivering incremental behavior solutions. -->
+      <p class="brand-headline">Senior Back-End Engineer | Scala & Microservices | 10+ Years</p>
+      <p class="summary-statement">Senior Back-End Engineer with 10+ years building asynchronous, scalable back-end services in Scala, Play Framework, and Akka. As a customer-driven, test-first engineer, I specialize in functional programming paradigms—Algebraic Data Types (ADT), Generalized Algebraic Data Types (GADT)—to enforce type safety and prevent illegal state representation. Architected and delivered incremental behavior solutions across distributed systems, RESTful and RPC APIs, and monolithic applications serving cross-functional teams and business domains.</p>
+      <p class="summary-statement">Advocate for Behavior-Driven Design, Test-Driven Development, and Data-Driven Design to codify correct behaviors, ensure customer value delivery, and maintain code quality through evolution. Demonstrated leadership coordinating cross-functional initiatives, mentoring team members, and delivering solutions that reduce complexity and improve developer experience. Proven track record: led Scala migration improving performance 10%, refactored 30% of microservice codebase while maintaining stability, increased payment transparency 70%, and championed TypeScript adoption reducing UI/API bugs across the organization.</p>
+      <p class="summary-statement">Seeking roles where I can architect robust back-end services, mentor engineers in functional programming practices, and drive technical excellence in distributed systems and microservice architectures.</p>
       <ul>
-        <!-- a statement about who you are professional -->
-        <!-- 2 statements highlighting a specific strength or experience for the audience or role -->
-        <!-- a statement specifically how or why your combined background aligns with target role / employer -->
-        <li>Over a decade in back-end async concurrent services written in <a href="https://www.scala-lang.org/">Scala</a>,
-          <a href="https://www.playframework.com/">Play framework</a>, <a href="https://doc.akka.io/">Akka</a>,
-          <a href="https://typelevel.org/cats/">Cats</a>,
-          and <a href="https://fs2.io/#/">FS2</a>.
-        </li>
-        <li>Implementer of asynchronous event back-end services and APIs design.</li>
+        <li>Over a decade in back-end async concurrent services written in <a href="https://www.scala-lang.org/">Scala</a>, <a href="https://www.playframework.com/">Play framework</a>, <a href="https://typelevel.org/cats/">Cats</a>.</li>
+        <li>Implementer of asynchronous back-end services, RESTful and RPC API design.</li>
         <li>Effective communications and team collaboration.</li>
-        <li>Advocate of <a href="https://docs.scala-lang.org/scala3/book/types-adts-gadts.html">expressive data types -
-            ADT, GADT -</a> codifying correct behaviors preventing illegal states.</li>
-        <li><a href="https://agilealliance.org/glossary/bdd/">Behavior</a>, Data, and
-            <a href="https://agilealliance.org/glossary/tdd/">Test</a> driven design and testing behaviors (customer
-          goals, behaviors, and workflows)</li>
-        <li>Experienced in monolith, distributed (right sized) services, and distributed monolith.</li>
-        <li>Remote since 2015 - long before COVID and corporate embraced the benefits</li>
-        <!-- <li>Structured polymorphic immutable software engineer.</li> < !-- structured, OO, Functional -- > -->
-        <!--
-        <li>Philosophy: If you're not testing your code, you don't know if it works. If you're not testing customer needs,
-            you're not delivering value.</li>
-        -->
+        <li>Advocate of <a href="https://docs.scala-lang.org/scala3/book/types-adts-gadts.html">expressive data types - Algebraic Datatypes (ADT), Generalized Algebraic Datatypes (GADT) -</a> codifying correct behaviors and preventing illegal states.</li>
+        <li><a href="https://agilealliance.org/glossary/bdd/">Behavior</a>, Data, and <a href="https://agilealliance.org/glossary/tdd/">Test</a> driven design and testing behaviors (customer goals, behaviors, and workflows).</li>
+        <li>Experienced in monolith, distributed (right-sized, microservice) services, and distributed monolith.</li>
       </ul>
     </div>
   </div>
@@ -67,25 +47,22 @@
     <div class="skills-container">
       <div class="skills">
         <ul>
-          <!-- row 1 4 col -->
-          <!--a1--><li>Iterative practices</li>
-          <!--b1--><li>API</li>
-          <!--c1--><li>System design</li>
-          <!--d1--><li>Git management</li>
-
-          <!-- row 2 4 col -->
-          <!--a2--><li>Functional</li>
-          <!--b2--><li>Back / Front end</li>
-          <!--c2--><li>AWS infrastructure</li>
-          <!--d2--><li>Docker</li>
-
-          <!-- row 3 4 col -->
-          <!--a3--><li>Streaming</li>
-          <!--b3--><li>SQL</li>
-          <!--c3--><li>Resource management</li>
-          <!--d3--><li>Scripting</li><!--Shell-->
-
-          <!--<li>Algorithms</li>-->
+          <li>Scala</li>
+          <li>SQL</li>
+          <li>Play Framework</li>
+          <li>Akka</li>
+          <li>Cats</li>
+          <li>FS2</li>
+          <li>AWS infrastructure</li>
+          <li>Docker</li>
+          <li>Git</li>
+          <li>GitHub</li>
+          <li>GitHub CI/CD</li>
+          <li>Agile practices</li>
+          <li>Functional Programming</li>
+          <li>Behavior-Driven Design</li>
+          <li>Test-Driven Design</li>
+          <li>Domain-Driven Design</li>
         </ul>
       </div>
     </div>
@@ -95,162 +72,68 @@
 
   <div class="job">
     <company>
-      <a href="https://www.booktst.com">Travel Syndicated Technology (TST LLC)</a>, Alpharetta, Georgia
+      <a href="https://www.booktst.com">Travel Syndicated Technology (TST LLC), (Remote)</a>, Alpharetta, Georgia
       <jdate>Feb 2020 to Feb 2026</jdate>
     </company>
-    <brief>
-      Focusing on providing world class travel technology solutions to our customers in an effort to significantly
-      improve look-to-book ratios and maximize revenue.
-      Benefiting travel agencies, consolidators, member organizations, or other entities looking to sell all types of
-      travel online including air, car, hotel, cruise, or tour packages.
-    </brief>
-    <!-- <div class="company-stack">Scala, Play, Twirl, Kafka &nbsp; | &nbsp; Angular, React &nbsp; | &nbsp; AWS Infrastructure</div> -->
     <jtitle>Senior Software Engineer</jtitle>
     <jbrief>
-      Joined TST to apply skills and understanding of Scala, Akka, and Kafka to the cruise inventory data&nbsp;load
-      services. Team reorganized resulting in a role change becoming intimate with cruise booking work flows. Assisting
-      Product Owner with customer issues and satisfaction. A subject matter expert, leveraging historical knowledge of
-      the codebase and project context. Collaboration, removing obstacles, and connecting team members with cross functional
-      members. Responsibilities encompass managing and coordinating the team's efforts, overseeing migrations and upgrades,
-      and actively contributing to the ongoing development of the cruise product. Encouraging and facilitating the use of
-      type system to codify correct behaviors and prevent illegal states.
+      Joined TST to apply skills and understanding of Scala, Akka, and Kafka to the cruise inventory data load services. Team reorganized changing my role to dive deep into understanding the cruise booking workflows. The cruise product was a distributed monolith architecture using 5 Scala Play services and MySQL. Assisted Product Owner with customer issues and satisfaction. Served as a subject matter expert, leveraging historical knowledge of the codebase and project context during collaboration, removing obstacles, and connecting team members with cross-functional members. Responsibilities encompassed managing and coordinating the team's efforts, overseeing migrations and upgrades, and actively contributing to the ongoing development of the cruise product. Encouraged and facilitated the use of type system to codify correct behaviors and prevent illegal states.
     </jbrief>
     <div class="achievements">
       <ul>
-        <li>Worked with Product Owner to convey product behavior given cruise line vendor API responses or what is missing.</li>
-        <li>Meetings with TST consumers (AAA clubs) to understand and provide options to resolve workflow issues.</li>
-        <li>Refactored significant portions of the cruise Scala Play back-end services while adding
-            <a href="https://www.agilealliance.org/glossary/bdd/">behavior driven design tests</a>
-            to ensure continued expectations during code cleaning and avoid regressions.</li>
-        <li>Subject matter expert of cruise booking and post booking cruise booking operations, and booking maintenance.</li>
-        <li>Defined booking and post booking enhancements and processing for transparency of payments status and booking
-            recovery for TST customers (booking agents) and consumers.</li>
-        <!--
-        <li>70+% time resolving and propagating changes to improve the 8 Scala Play based services that impact the cruise
-          shopping, book, and synchronization.</li>
-        <li>Applying AWS Kubernettes production configuration and patches</li>
-        <li>Scrum master role coordinating product owner, team members expectations, and team load.</li>
-        -->
+        <li>Met with TST's 4 largest AAA clubs to understand and provide options to implement or refine their workflows.</li>
+        <li>Collaborated with Product Owner to convey product behavior given cruise line vendor API responses including what was missing to assist the customer in understanding presentation issues.</li>
+        <li>Refactored 30% portions of the cruise Scala Play back-end RESTful microservices while adding <a href="https://www.agilealliance.org/glossary/bdd/">behavior driven design tests</a> to increase product stability and ensure continued expectations during code cleaning and avoid regressions.</li>
+        <li>Served as subject matter expert collaborating with 4 team members regarding cruise booking operations, feature additions, and process improvements.</li>
+        <li>Defined and implemented pre and post booking enhancements and processing for a 70% increase in transparency of payment completion and status.</li>
+        <li>Utilized GitHub and GitHub Actions for CI/CD pipeline automation for cruise's 7 repositories.</li>
       </ul>
     </div>
-    <div class="stack">Scala, Play, concurrency, async API &nbsp; | &nbsp; Twirl, JavaScript &nbsp; | &nbsp; Docker
-    </div>
-  </div>
-
-  <div class="job print-break">
-    <company>
-      <a href="https://www.1010data.com">1010data</a>, New York, New York
-      <jdate>Mar 2018 to Nov 2019</jdate>
-    </company>
-    <brief>
-      Empowering companies to monitor shifts in consumer and market demand and rapidly respond with highly-targeted
-      strategies.
-    </brief>
-    <!-- <div class="company-stack">Scala, Play, C, C++, K &nbsp; | &nbsp; VueJs &nbsp; | &nbsp; AWS Infrastructure</div> -->
-    <jtitle>Senior Software Engineer</jtitle>
-    <jbrief>
-      Implementing a new user tool to address an entry point for 1010data customers. This provided spreadsheet and
-      graphical views as incremental processing steps are applied during ingest, transform, and analysis of customer
-      data that can be applied to the full data set. I provided Scala back-end services coordinating multi-gigabyte
-      uploads via a chunking process while injecting a sample into the 1010data database API for data visualization of
-      the transformations.
-    </jbrief>
-    <div class="achievements">
-      <ul>
-        <li>~70% of my time in Scala Play back-end REST services integrating UI and infrastructure requirements</li>
-        <li>Integrating the Scala AWS SDK to provide coordination of S3 indexes and aggregation for the upload process</li>
-        <li>Presented company tech talks on Scala fundamentals and practices: Future, Collections, For Comprehension, Type Class.</li>
-        <li>~20% of my time implementing customer UI: Vue, Vuex, and TypeScript.</li>
-        <li>Championed the integration of TypeScript that reduced UI and API call bugs.</li>
-        <li>Scrum master and production deployments</li>
-      </ul>
-    </div>
-    <div class="stack">Scala, Play, AWS SDK &nbsp; | &nbsp; VueJs, JavaScript, TypeScript &nbsp; | &nbsp; AWS: EBS, EC2,
-      ELB, S3</div>
   </div>
 
   <div class="job">
     <company>
-      <a href="http://www.arris.com">ARRIS</a>, Horsham, Pennsylvania: CCAD LLC Joint Venture
-      <jdate>May 2015 to Dec 2017</jdate>
+      <a href="https://www.1010data.com">1010data, (Remote)</a>, New York, New York
+      <jdate>Mar 2018 to Nov 2019</jdate>
     </company>
-    <brief>
-      Powering a smart, connected world. The company's leading hardware, software and services transform the way that
-      people and businesses stay informed, entertained and connected.
-    </brief>
-    <!-- <div class="company-stack">Scala, Cats, FS2, Akka, Kafka &nbsp; | &nbsp; ScalaJs &nbsp; | &nbsp; BitBucket,
-         Bamboo &nbsp; | &nbsp; VMWare</div> -->
-    <jtitle>Software Engineer</jtitle>
+    <jtitle>Senior Software Engineer</jtitle>
     <jbrief>
-      Moved into this role to advance the distributed tiered topology to configure, manage, and propagate streaming
-      video metadata - channel maps, guides, crypto keys, spectrum configuration. This was a shift into the Scala
-      language using Cats, FS2, and Kafka. This is an eventual consistency system with the types and rates of the
-      messaging.
-      <!--
-        This is a multi-service tiered architecture that managed cryptographic keys for encrypted content delivery, TV
-        guide data streams, channel plan changes, dynamic VOD / NVOD channel assignments, edge configuration.
-        Utilizing Kafka pub/sub with Akka streams – graphs and flows – to process, augment or refine messages, and
-        direct the emission of transformed messages in the Scala language and frameworks. API implementation via
-        Akka HTTP and JSON payloads. Inter-service messages encode via Avro for efficient high volume traffic. My
-        responsibilities include developing pipeline flows, Avro migration, Akka persistence and eventual consistency
-        resolutions. Involved in BitBucket code repository management, Bamboo build systems, and VMWare
-        hardware virtualization for deployed code.
-        Additional responsibilities included managing Scala version breaking changes during core and library
-        upgrades.
-        An active participant in product planning and sprint grooming with product owners.
-        As well as resolving customer maintenance and issues.
-        -->
+      Implemented a new user tool to reduce the barrier into data analysis for 1010data customers. This provided spreadsheet and graphical views as incremental processing steps were applied during ingest, transform, and analysis of customer data that could be applied to the full data set. I provided Scala back-end RESTful services coordinating multi-gigabyte uploads via a chunking process while injecting a sample into the 1010data database API for data visualization of the transformations. This tool was a monolith running on EC2 instances with ELB and S3 resources.
     </jbrief>
     <div class="achievements">
       <ul>
-        <li>Transitioned to a Scala back-end team where I cut my teeth by migrating the code base to Java 1.8 and Scala
-            2.10 gaining performance and library improvements.</li>
-        <li>Coordinated with Product Owner and Product Manager in product planning and sprint grooming.</li>
+        <li>Allocated 70% of time in Scala Play back-end REST services integrating UI and infrastructure requirements.</li>
+        <li>Integrated the Scala AWS SDK to provide coordination of S3 indexes and aggregation for the upload process.</li>
+        <li>Presented company tech talks on Scala fundamentals and practices: Future, Collections, For Comprehension, and Type Class.</li>
+        <li>Allocated 20% of time implementing customer UI supporting the file upload and ingest visualization: HTML, CSS, JavaScript, Vue, Vuex, and TypeScript.</li>
+        <li>Championed the integration of TypeScript into the source code which reduced UI and API bugs improving overall developer experience.</li>
+        <li>Utilized GitHub for cloud-based source control and repository management.</li>
+        <li>Served as Scrum Master working with the Team Manager and Product Owner to coordinate sprint planning and feature presentation.</li>
       </ul>
     </div>
-    <div class="stack">Scala, Cats, FS2, Akka, Kafka, concurrency, async API &nbsp; | &nbsp; BitBucket, Bamboo &nbsp; |
-      &nbsp; VMWare</div>
   </div>
 
-  <div class="job print-break">
+  <div class="job">
     <company>
-      <a href="http://www.arris.com">ARRIS</a>, Horsham, Pennsylvania: Motorola Mobility
-      <jdate>Apr 1996 to May 2015</jdate>
+      <a href="http://www.arris.com">ARRIS, (Remote)</a>, Horsham, Pennsylvania, CCAD LLC Joint Venture
+      <jdate>May 2015 to Dec 2017</jdate>
     </company>
-    <brief>
-      Powering a smart, connected world. The company's leading hardware, software and services transform the way that
-      people and businesses stay informed, entertained and connected.<br />
-    </brief>
-    <jtitle>System Integration and Test Automation and Tools Engineering</jtitle>
+    <jtitle>Software Engineer</jtitle>
     <jbrief>
-      Prior achievements in Integration and Test Automation lead to increased responsibilities to architect and lead
-      the development of a scalable test automation framework to support concurrent qualification testing of multiple
-      product lines within the ARRIS CableTV hardware manufacturing using racked servers and specialized test equipment.
+      Advanced into this role with a company restructuring to add features and resolve issues in the distributed tiered CATV management topology. Five application services provided configuration, control, and propagated streaming video metadata - channel maps, guides, crypto keys, spectrum configuration. Transitioned to the Scala language and libraries - Cats, FS2, and Kafka.
     </jbrief>
     <div class="achievements">
       <ul>
-        <li>Architect and Lead of a team of 10 engineers – 6 offshore and 4 US - developing the services to facilitate
-            concurrent product qualification testing. A scalable automation framework for single product to multiple product
-            testing. Implemented a C, C++, and Python back-end to schedule, monitor, and execute tests across multiple racks
-            of products under test. Implemented a Visual Basic .Net web front end to configure test scheduling, status, and
-            present results.</li>
-        <li>Introduced and established National Instruments LabVIEW and TestStand as the standard automation tools for
-            system integration and test automation across multiple product lines achieving 25% to 80% reduction in test
-            times. I managed an offshore team providing architecture and design expectations.</li>
-        <li>Implemented proprietary Wireshark protocol dissectors for CATV head-end and Switched Digital Video operational
-            diagnostics.</li>
-        <li>Implemented set-top box channel change simulation tool for Switched Digital Video load testing.</li>
+        <li>Transitioned to a Scala back-end team where I developed Scala skills by migrating the codebase to Java 1.8 and Scala 2.10 achieving 10% performance improvements.</li>
+        <li>Managed feature augmentation to pass additional metadata through the Akka stream processing, Kafka events requiring Avro updates and sign-off.</li>
+        <li>Collaborated with Product Owner and Product Manager in product planning and sprint grooming.</li>
       </ul>
     </div>
-    <div class="stack">C++, Python, VBasic &nbsp; | &nbsp; VBasic SSR &nbsp; | &nbsp; COTS servers, Windows Servers,
-      company hardware</div>
   </div>
 
   <sectionName>Education</sectionName>
-  <!-- 2002 to 2009 -->
-  Lafayette College, Easton Pennsylvania<br />
-  Bachelors in Science for Electrical and Computer Engineering
-  <!-- 3.5 GPA electrical engineering - Analog, RF, computer, FPGA, software -->
+  Bachelor of Science in Electrical and Computer Engineering<br />
+  Lafayette College, Easton, Pennsylvania
 
 </body>
 

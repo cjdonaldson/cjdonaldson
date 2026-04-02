@@ -1,10 +1,12 @@
 body {
   margin-left: 2em;
   margin-right: 2em;
+  font-family: 'Liberation Serif', 'Times New Roman', serif;
 }
 .resume-title {
   text-align: center;
-  font-size: 2.3em;
+  font-size: 2.0em;
+  font-weight: bold;
 }
 .contact-grid {
   display: grid;
@@ -25,17 +27,17 @@ div.summary > li {
   margin-left: 2.0em;
   text-indent: -1.4em;
 }
-.summary-grid {
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-  font-size: 1.2em;
-}
-div.summary-grid > div:nth-child(2) {
+.brand-headline {
   text-align: center;
-  padding-bottom: 0.5em;
+  font-size: 1.5em;
+  font-weight: bold;
+  margin-top: 0;
+  margin-bottom: 0.4em;
 }
-div.summary-grid > div:nth-child(3) {
-  text-align: right;
+.summary-statement {
+  /* font-size: 1.1em; */
+  margin-top: 0;
+  margin-bottom: 0.5em;
 }
 sectionName {
   display: block;
@@ -47,13 +49,19 @@ sectionName {
   border-right-width: 0px;
   padding-top: 0.5em;
   padding-bottom: 0.5em;
-  font-size: 1.4em;
+  /* font-size: 1.1em; */
+  font-weight: bold;
 }
 company {
   display: block;
   padding-top: 0.5em;
-  font-size: 1.1em;
-  text-decoration: underline;
+  /* font-size: 1.1em; */
+  font-weight: bold;
+  /* text-decoration: underline; */
+}
+company a:link, a:visited {
+  color: black;
+  text-decoration: none;
 }
 .company-stack {
   visibility: visible;
@@ -92,7 +100,7 @@ jdate {
 jtitle {
   padding-top: 0.5em;
   display: block;
-  font-size: 1.1em;
+  /* font-size: 1.1em; */
   padding-left: 0.0em;
 }
 jbrief {
@@ -147,4 +155,8 @@ div.job > div.achievements > li {
 }
 .tight-bottom {
   margin-bottom: -0.5em;
+}
+a:link, a:visited, a:hover, a:active {
+  color: black;
+  text-decoration: none;
 }
