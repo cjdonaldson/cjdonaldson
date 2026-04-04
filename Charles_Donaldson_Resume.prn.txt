@@ -31,8 +31,8 @@ Seeking roles where I can architect robust back-end services, mentor engineers
 in functional programming practices, and drive technical excellence in
 distributed systems and microservice architectures.
 
-- Over a decade in back-end async concurrent services written in Scala, Play
-  framework, Cats.
+- Over a decade in back-end asynchronous concurrent services written in Scala,
+  Play framework, Cats and Circe.
 - Implementer of asynchronous back-end services, RESTful and RPC API design.
 - Effective communications and team collaboration.
 - Advocate of expressive data types - Algebraic Datatypes (ADT), Generalized
@@ -83,8 +83,9 @@ and prevent illegal states.
   regressions.
 - Served as subject matter expert collaborating with 4 team members regarding
   cruise booking operations, feature additions, and process improvements.
-- Defined and implemented pre and post booking enhancements and processing for a
-  70% increase in transparency of payment completion and status.
+- Defined and implemented pre-booking and post-booking enhancements and
+  processing for a 70% increase in transparency of payment completion and
+  status.
 - Utilized GitHub and GitHub Actions for CI/CD pipeline automation for cruise's
   7 repositories.
 

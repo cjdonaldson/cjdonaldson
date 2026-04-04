@@ -14,7 +14,7 @@ Advocate for Behavior-Driven Design, Test-Driven Development, and Data-Driven De
 
 Seeking roles where I can architect robust back-end services, mentor engineers in functional programming practices, and drive technical excellence in distributed systems and microservice architectures.
 
-- Over a decade in back-end async concurrent services written in Scala, Play framework, Cats.
+- Over a decade in back-end asynchronous concurrent services written in Scala, Play framework, Cats and Circe.
 - Implementer of asynchronous back-end services, RESTful and RPC API design.
 - Effective communications and team collaboration.
 - Advocate of expressive data types - Algebraic Datatypes (ADT), Generalized Algebraic Datatypes (GADT) - codifying correct behaviors and preventing illegal states.
@@ -37,7 +37,7 @@ Joined TST to apply skills and understanding of Scala, Akka, and Kafka to the cr
 - Collaborated with Product Owner to convey product behavior given cruise line vendor API responses including what was missing to assist the customer in understanding presentation issues.
 - Refactored 30% portions of the cruise Scala Play back-end RESTful microservices while adding behavior driven design tests to increase product stability and ensure continued expectations during code cleaning and avoid regressions.
 - Served as subject matter expert collaborating with 4 team members regarding cruise booking operations, feature additions, and process improvements.
-- Defined and implemented pre and post booking enhancements and processing for a 70% increase in transparency of payment completion and status.
+- Defined and implemented pre-booking and post-booking enhancements and processing for a 70% increase in transparency of payment completion and status.
 - Utilized GitHub and GitHub Actions for CI/CD pipeline automation for cruise's 7 repositories.
 
 
