@@ -6,7 +6,7 @@ LinkedIn: LinkedIn.com/in/charlesdonaldson
 
 Summary
 
-Senior Back-End Engineer | Scala & Microservices | 10+ Years
+Senior Back-End Engineer | Scala Microservices | 10+ Years
 
 Senior Back-End Engineer with 10+ years building asynchronous, scalable back-end services in Scala, Play Framework, and Akka. As a customer-driven, test-first engineer, I specialize in functional programming paradigms—Algebraic Data Types (ADT), Generalized Algebraic Data Types (GADT)—to enforce type safety and prevent illegal state representation. Architected and delivered incremental behavior solutions across distributed systems, RESTful and RPC APIs, and monolithic applications serving cross-functional teams and business domains.
 
